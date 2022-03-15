@@ -18,4 +18,4 @@ Alternatively, you can also right click on the index.html file and select "Open 
 
 ## Coding a Theme
 
-
+You will want to read through the template.less (or template.css) file. There are a lot of helpful hints here on common practices when building themes.

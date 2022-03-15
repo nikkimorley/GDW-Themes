@@ -148,5 +148,15 @@ Import this file into your stylesheet and you can use these classes to define el
   margin-top: auto;
 }
 /* ------------------------------------------------------------ *\
+	Animations
+\* ------------------------------------------------------------ */
+/*
+  To make animations pretty easy, we utilze two libraries: animate.css and wow.js
+
+  You can read up on them here and how to use them:
+  https://animate.style/
+  https://wowjs.uk/
+*/
+/* ------------------------------------------------------------ *\
 	End Template File
 \* ------------------------------------------------------------ */
