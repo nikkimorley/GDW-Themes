@@ -31,6 +31,7 @@
 }
 
 body {
+	font-family: @font;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
@@ -85,6 +86,27 @@ a {
 
 ===================================================================== */
 
+// .example-class is only to demonstrate media queries nested in classes
+.example-class {
+	font-size: 18px;
+	padding: 15px 0;
+	color: #fff;
+	background: pink;
+
+	@media @mobile {
+		background: purple;
+	}
+
+	@media @tablet {
+		background: steelblue;
+	}
+
+	@media @desktop {
+		background: blue 
+	}
+	
+}
+
 // Custom Styles
 #theme-custom-banner {
 	
@@ -99,8 +121,6 @@ a {
 					// MOBILE MEDIA QUERIES
 
 ===================================================================== */
-
-
 
 //Screen Sizes (<1200px)
 @media only screen and (max-width: @screen-lg) {

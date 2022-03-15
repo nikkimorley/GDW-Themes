@@ -152,6 +152,7 @@ Import this file into your stylesheet and you can use these classes to define el
   transition: 0.3s all;
 }
 body {
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -198,6 +199,27 @@ a:hover {
 					// CUSTOM STYLES
 
 ===================================================================== */
+.example-class {
+  font-size: 18px;
+  padding: 15px 0;
+  color: #fff;
+  background: pink;
+}
+@media only screen and (max-width: 768px) {
+  .example-class {
+    background: purple;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .example-class {
+    background: steelblue;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .example-class {
+    background: blue;
+  }
+}
 /* ==================================================================
 
 					// MOBILE MEDIA QUERIES
