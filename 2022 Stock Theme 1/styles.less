@@ -90,19 +90,24 @@ a {
 .example-class {
 	font-size: 18px;
 	padding: 15px 0;
-	color: #fff;
+	color: #000;
 	background: pink;
 
-	@media @mobile {
-		background: purple;
+	@media @desktop {
+		color: #fff;
+		background: blue 
 	}
 
 	@media @tablet {
 		background: steelblue;
 	}
 
-	@media @desktop {
-		background: blue 
+	@media @mobile {
+		background: purple;
+	}
+
+	@media @mobile-xs {
+		background: green;
 	}
 	
 }

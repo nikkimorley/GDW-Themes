@@ -215,12 +215,13 @@ a:hover {
 .example-class {
   font-size: 18px;
   padding: 15px 0;
-  color: #fff;
+  color: #000;
   background: pink;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   .example-class {
-    background: purple;
+    color: #fff;
+    background: blue;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -228,9 +229,14 @@ a:hover {
     background: steelblue;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 768px) {
   .example-class {
-    background: blue;
+    background: purple;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .example-class {
+    background: green;
   }
 }
 /* ==================================================================

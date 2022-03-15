@@ -18,4 +18,8 @@ Alternatively, you can also right click on the index.html file and select "Open 
 
 ## Coding a Theme
 
-You will want to read through the template.less (or template.css) file. There are a lot of helpful hints here on common practices when building themes.
+You will want to read through the template.less (or template.css) file. There are a lot of helpful hints here on common practices when building themes for GDW, links to the libraries we use, and documentation for classes built into our platform that you are welcome to use in the theme.
+
+GDW is using a desktop first approach and using media queries to scale down. There is an example class called `.example-class` in styles.less as well as an example element in index.html that will illustrate this concept and how to include media queries within the class.
+
+There are also media queries in the bottom of styles.less reflecting our old method of media queries in themes. The preferred method of writing media queries within the class is preferred.
