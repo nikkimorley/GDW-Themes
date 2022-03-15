@@ -1,0 +1,199 @@
+/* ------------------------------------------------------------ *\
+	Great Dental Websites (GDW) Helper File
+\* ------------------------------------------------------------ */
+
+/*
+  Dear Dev,
+
+  Use this guide as an @import into your less file to have access to important styles from our platform that you can use in your HTML file. The classes defined in this file will simulate the important css classes created by our platform environment.
+
+  We have also included a section on rules you must follow when coding for us. This will help eliminate back and forth for edits and save you time when coding.
+
+  - The GDW Dev Team
+*/
+
+/* ------------------------------------------------------------ *\
+	GDW RULES and GUIDE when Coding
+\* ------------------------------------------------------------ */
+
+/*
+  We use Bootstrap 3
+    - You can use the following code in your HTML <head> to simulate our Bootstrap 3 code used in our platform:
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    - You may use any Bootstrap 3 classes in the docs here: https://getbootstrap.com/docs/3.3/css/, however, DO NOT override these classes in your stylesheet. Use a new class name to target that element.
+    - We use the grid feature quite frequently and you are welcome to use it as well to streamline your coding. https://getbootstrap.com/docs/3.3/css/#grid 
+
+    We use a 12 section grid so col-sm-6 would use 50% of the available width.
+    
+    An example of this would be:
+
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 about-img">
+              <img src="../path/img/doctor-img.jpg" alt="image of the doctor" />
+            </div>
+            <div class="col-sm-6 about-text">
+              Some example text about the doctor or practice.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    - We use the Bootstrap .container class to define our containers. Use this, DO NOT define your own with .shell.
+
+  Our platform uses special media query breakpoints. These breakpoints are used with Bootstrap:
+    - Media query breakpoints (use ONLY these breakpoints, do not define new ones). They are defined in variables below:
+      @screen-lg: 1200px
+      @screen-md: 992px
+      @screen-sm: 768px
+      @screen-xs: 480px
+    - The Bootstrap col- classes uses these breakpoints. 
+      Ex: 
+      col-xs refers to sizes below screen-sm and is just full width
+      col-sm refers to sizes between the screen-sm and screen-md breakpoint
+      col-md refers to sizes between the screen-md and screen-lg breakpoint
+      col-lg refers to sizes at or above screen-lg
+
+  We have reserved classes in our platform
+    - In our platform, we have reserved classes for common elements and bootstrap 3 classes. Some examples are: .btn, .btn-lg, .btn-default, .container, .carousel, .dropdown, .flexslider, .flex, and more...
+    - If you are creating a new style from the theme design, or are targeting a bootstrap element with one of these names, please use a new class name or put "theme-" in front of the class name. (Ex: .about-img, .theme-btn) This way the new theme classes won't conflict with our platform styles.
+
+  General Reminders
+  - Do not use object-fit. We still have users who use IE and this will cause a bug.
+  - Do not use h1 elements in the theme build. We already have an h1 in our page content area that is pre-defined in the platform so this will not be valid HTML. Please use an h2 or div and style appropriately.
+  - Do not define your own containers, use the bootstrap 3 .container class and breakpoints defined above.
+  - Do not put a # in href="", we use ColdFusion and this throws an error when we integrate your code.
+
+*/
+
+
+/* ------------------------------------------------------------ *\
+	GDW Platform Classes and Variables
+\* ------------------------------------------------------------ */
+
+/*
+Import this file into your stylesheet and you can use these classes to define elements in your HTML build, and the variables in your stylesheet. Do NOT target these classes in your stylesheet for style changes, make a new class to target.
+*/
+
+// Media Query sizes
+// --------------------------------------------------
+
+@screen-lg: 1200px;
+@screen-md: 992px;
+@screen-sm: 768px;
+@screen-xs: 480px;
+
+
+// Container sizes
+// --------------------------------------------------
+
+// Number of columns in the grid system
+@grid-columns: 12;
+// Padding, to be divided by two and applied to the left and right of all columns
+@grid-gutter-width: 30px;
+
+// Small screen / phone
+@container-sm: ((720px + @grid-gutter-width));
+
+// Medium screen / tablet
+@container-md: ((721px + @grid-gutter-width));
+
+// Large screen / desktop
+@container-lg: ((945px + @grid-gutter-width));
+
+// XLarge screen / wide desktop
+@container-xl:  ((1140px + @grid-gutter-width));
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+  display: block;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+// Container Grid 
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  15px;
+  padding-right: 15px;
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  15px;
+  padding-right: 15px;
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+  @media (min-width: @screen-sm) {
+    width: @container-md;
+  }
+
+  @media (min-width: @screen-md) {
+    width: @container-lg;
+  }
+
+  @media (min-width: @screen-lg) {
+    width: @container-xl;
+  }
+
+}
+
+// Classes to integrate flexbox with Bootstrap 3
+// --------------------------------------------------
+
+// NOTE: If you use these, just use the classes in your HTML. Do not define these in the CSS.
+
+// Place this class on the .row div
+.bootstrap-flex-row {
+	display: flex;
+	flex-wrap: wrap; //keeps bootstrap defined sizing on the child elements
+	justify-content: center; // center odd number of bootstrap items without using push or pull.
+	// This fixes a bug in Safari
+	&:before, &:after {
+	  display: none;
+	}
+}
+
+// Place this on the bootstrap element with the column class. (Ex: col-sm-6)
+.bootstrap-flex-col {
+	display: flex; //makes all bootstrap column elements the same height
+	flex-direction: column;
+}
+
+// Wrap the content that will be inside .bootstrap-flex-col with a div and add the .bootstrap-flex-content class
+.bootstrap-flex-content {
+	flex: 1 1 auto;
+	display: flex; //makes the content the same height as .bootstrap-flex-col
+	flex-direction: column;
+	img {
+		align-self: flex-start;
+	}
+}
+
+// Sometimes we add something that needs to be on the bottom of the .bootstrap-flex-content element. Ex: A button. Create a div to house this content and add the .bootstrap-flex-bottom class.
+.bootstrap-flex-bottom {
+	margin-top: auto;
+}

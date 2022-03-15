@@ -1,0 +1,143 @@
+// Import assets
+@import './template.less';
+
+// Font Link
+// @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+// Font
+@font: 'Raleway', sans-serif;
+// Image Path
+@path: '/images/';
+
+// Media Query Sizes
+@desktop: ~"only screen and (max-width: @{screen-lg})"; // laptop size
+@tablet: ~"only screen and (max-width: @{screen-md})"; // tablet size
+@mobile: ~"only screen and (max-width: @{screen-sm})"; // larger phones
+@mobile-xs: ~"only screen and (max-width: @{screen-xs})"; // smaller phones
+
+// Colors
+@primary: #000;
+@secondary: #000;
+@highlight: #000;
+
+// Variables
+@links:@primary;
+@hover: lighten(@links, 10%);
+
+// Include this in any class you want to transition
+.transition {
+	-webkit-transition: .3s all;
+	transition: .3s all;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: @font;
+	}
+}
+
+a {
+	color: @links;
+	.transition;
+	&:hover {
+		color: @hover;
+		text-decoration: none;
+	}
+}
+
+/* ==================================================================
+
+					// CUSTOM BANNER STYLES
+
+===================================================================== */
+
+/*=== fonts & reusable styles ==*/
+#main {
+	h1, h2, h3, h4, h5, h6 {
+		// font-family: ;
+		// color: ;
+	}
+	h1 {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 1.7em;
+	}
+	h3 {
+		font-size: 1.5em;
+	}
+	h4, h5, h6 {
+		font-size: 1.5em;
+	}
+}
+
+/* ==================================================================
+
+					// CUSTOM STYLES
+
+===================================================================== */
+
+// Custom Styles
+#theme-custom-banner {
+	
+}
+#theme-bottom-banner {
+	
+}
+
+
+/* ==================================================================
+
+					// MOBILE MEDIA QUERIES
+
+===================================================================== */
+
+
+
+//Screen Sizes (<1200px)
+@media only screen and (max-width: @screen-lg) {
+	#theme-custom-banner {
+
+	}
+	#theme-bottom-banner {
+
+	}
+}
+
+//Screen Sizes (<992px)
+@media only screen and (max-width: @screen-md) {
+	#theme-custom-banner {
+
+	}
+	#theme-bottom-banner {
+		
+	}
+}
+
+//Screen Sizes (<768px)
+@media only screen and (max-width: @screen-sm) {
+	#theme-custom-banner {
+
+	}
+	#theme-bottom-banner {
+		
+	}
+}
+
+//small devices like iPhone 5
+@media only screen and (max-width: @screen-xs) {
+	#theme-custom-banner {
+
+	}
+	#theme-bottom-banner {
+		
+	}
+}
