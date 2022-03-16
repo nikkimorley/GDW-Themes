@@ -330,10 +330,40 @@ a:hover {
   position: relative;
   z-index: 0;
   background: #EBEBEB;
+}
+#theme-custom-banner #banner #banner-img {
+  position: absolute;
+  background: url('images/banner.jpg') center / cover no-repeat;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 50%;
+}
+@media only screen and (max-width: 992px) {
+  #theme-custom-banner #banner #banner-img {
+    position: relative;
+    left: 0;
+    height: auto;
+    background: none;
+    max-width: 100%;
+  }
+}
+#theme-custom-banner #banner .text-wrap {
   padding: 100px 0 80px;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-custom-banner #banner .text-wrap {
+    padding: 70px 0 60px;
+  }
 }
 #theme-custom-banner #banner .theme-text {
   margin-bottom: 80px;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-custom-banner #banner .theme-text {
+    margin-bottom: 60px;
+  }
 }
 /* ==================================================================
 
