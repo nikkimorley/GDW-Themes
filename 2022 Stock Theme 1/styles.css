@@ -325,45 +325,61 @@ a:hover {
 .theme-text {
   font-family: 'Mulish', sans-serif;
   font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 30px;
 }
-#theme-custom-banner #banner {
+.picture-split-module {
   position: relative;
   z-index: 0;
   background: #EBEBEB;
 }
-#theme-custom-banner #banner #banner-img {
+.picture-split-module .picture-split-image {
   position: absolute;
-  background: url('images/banner.jpg') center / cover no-repeat;
-  left: 50%;
   top: 0;
   height: 100%;
   width: 100%;
-  max-width: 50%;
 }
 @media only screen and (max-width: 992px) {
-  #theme-custom-banner #banner #banner-img {
+  .picture-split-module .picture-split-image {
     position: relative;
     left: 0;
     height: auto;
     background: none;
     max-width: 100%;
   }
+  .picture-split-module .picture-split-image img {
+    width: 100%;
+  }
 }
-#theme-custom-banner #banner .text-wrap {
+.picture-split-module .text-wrap {
   padding: 100px 0 80px;
 }
 @media only screen and (max-width: 1200px) {
-  #theme-custom-banner #banner .text-wrap {
+  .picture-split-module .text-wrap {
     padding: 70px 0 60px;
   }
 }
-#theme-custom-banner #banner .theme-text {
+.picture-split-module .theme-text {
   margin-bottom: 80px;
 }
 @media only screen and (max-width: 1200px) {
-  #theme-custom-banner #banner .theme-text {
+  .picture-split-module .theme-text {
     margin-bottom: 60px;
   }
+}
+#theme-custom-banner #banner #banner-img {
+  background: url('images/banner.jpg') center / cover no-repeat;
+  left: 50%;
+  max-width: 50%;
+}
+#theme-custom-banner #services #services-img {
+  background: url('images/services.jpg') center / cover no-repeat;
+  right: 52%;
+  max-width: 52%;
+}
+#theme-custom-banner #services .theme-text {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 /* ==================================================================
 
