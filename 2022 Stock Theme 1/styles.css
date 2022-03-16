@@ -342,10 +342,10 @@ a:hover {
 @media only screen and (max-width: 992px) {
   .picture-split-module .picture-split-image {
     position: relative;
-    left: 0;
+    left: 0!important;
     height: auto;
     background: none;
-    max-width: 100%;
+    max-width: 100%!important;
   }
   .picture-split-module .picture-split-image img {
     width: 100%;
