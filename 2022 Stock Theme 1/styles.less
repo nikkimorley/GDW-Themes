@@ -2,12 +2,13 @@
 @import '../template.less';
 
 // Font Link
-// @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Mulish:wght@200;400;700&display=swap');
 
 // Font
-@font: 'Raleway', sans-serif;
+@font-headline: 'Arvo', sans-serif;
+@font: 'Mulish', sans-serif;
 // Image Path
-@path: '/images/';
+@path: './images/';
 
 // Media Query Sizes
 @desktop: ~"only screen and (max-width: @{screen-lg})"; // laptop size
@@ -16,12 +17,14 @@
 @mobile-xs: ~"only screen and (max-width: @{screen-xs})"; // smaller phones
 
 // Colors
-@primary: #000;
-@secondary: #000;
-@highlight: #000;
+@themeColor1: #EBC656;
+@themeColor2: #EBEBEB;
+@themeColor3: #40505A;
+
+@body-color: #000;
 
 // Variables
-@links:@primary;
+@links:@themeColor1;
 @hover: lighten(@links, 10%);
 
 // Include this in any class you want to transition
@@ -35,13 +38,18 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
+	color: @body-color;
+	background: url('@{path}bg.jpg');
+	font-size: 20px;
+	font-weight: 200;
+
 	h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
-		font-family: @font;
+		font-family: @font-headline;
 	}
 }
 
@@ -63,20 +71,27 @@ a {
 /*=== fonts & reusable styles ==*/
 #main {
 	h1, h2, h3, h4, h5, h6 {
-		// font-family: ;
-		// color: ;
+		font-family: @font-headline;
 	}
 	h1 {
-		font-size: 1.8em;
+		font-size: 55px;
+		line-height: 65px;
+		margin-bottom: 25px;
 	}
 	h2 {
-		font-size: 1.7em;
+		font-size: 25px;
+		line-height: 35px;
+		margin: 35px 0 30px;
 	}
 	h3 {
-		font-size: 1.5em;
+		font-size: 22px;
+		line-height: 32px;
+		margin: 25px 0 20px;
 	}
 	h4, h5, h6 {
-		font-size: 1.5em;
+		font-size: 20px;
+		line-height: 30px;
+		margin: 20px 0 15px;
 	}
 }
 
@@ -112,9 +127,62 @@ a {
 	
 }
 
+.theme-btn {
+	position: relative;
+	// z-index: 1;
+	display: inline-block;
+	margin-right: 15px;
+	background: @themeColor1;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: 1.5px;
+	padding: 30px 55px;
+	.transition;
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		content: "";
+		display: block;
+		border: solid 1px tint(@themeColor3, 40%);
+		height: 100%;
+		width: 100%;
+		right: -14px;
+		bottom: -19px;
+	}
+
+	&:hover {
+		background: @themeColor3;
+		color: #fff;
+	}
+}
+
+.theme-headline {
+	font-family: @font-headline;
+	font-size: 55px;
+	line-height: 65px;
+	margin-bottom: 30px;
+}
+
+.theme-text {
+	font-family: @font;
+	font-size: 20px;
+}
+
 // Custom Styles
 #theme-custom-banner {
-	
+	#banner {
+		position: relative; 
+		z-index: 0; // find a way to not need this - TODO
+		background: @themeColor2;
+		padding: 100px 0 80px;
+
+		.theme-text {
+			margin-bottom: 80px;
+		}
+	}
 }
 #theme-bottom-banner {
 	

@@ -23,3 +23,21 @@ You will want to read through the template.less (or template.css) file. There ar
 GDW is using a desktop first approach and using media queries to scale down. There is an example class called `.example-class` in styles.less as well as an example element in index.html that will illustrate this concept and how to include media queries within the class.
 
 There are also media queries in the bottom of styles.less reflecting our old method of media queries in themes. The preferred method of writing media queries within the class is preferred.
+
+
+### Lighten, Darken, Tint, Shade 
+
+TBD
+
+
+### Retina and Images
+
+TBD
+
+### Pull Requests
+
+TBD
+
+### visible-xs, hidden-xs
+
+TBD
