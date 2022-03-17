@@ -29,20 +29,46 @@ There are also media queries in the bottom of styles.less reflecting our old met
 
 TBD
 
-
 ### Retina and Images
 
 TBD
 
+### Responsive Sizing Cheat Sheet
+
+You will see two sets of media query definitions. The largely differ in their site build approach. GDW uses a desktop first approach so global css styles (styles created that don't exist within a media query) will target all sizes and media queries start at 1200px and go down. (Anthing at 1200px and smaller, then anything at 992px or smaller, then anything at 768px or smaller, then anything at 380px or smaller.)
+
+Bootstsrap on the other hand, uses a mobile first approach, so global styles will target all sizes but media queries will break the size into four breakpoints and start with the mobile (anything less than 768px, then anything greater than 768px, then anything greater than 992px, finally anything greater than 1200px).
+
+A visual representation of the info above:
+
+GDW - Desktop first Approach                                                      |
+----------------------------------------------------------------------------------|
+@mobile-xs   |@mobile   |@tablet   |@desktop    |No size definition               |
+----------------------------------------------------------------------------------|
+≤480px       |≤768px    |≤992px    |≤1200px     |>1200px & undefined breakpoints  |
+----------------------------------------------------------------------------------|
+Bootstrap - Mobile first approach                                                 |
+----------------------------------------------------------------------------------|
+*-xs         |*-sm      |*-md     |*-lg         |No size definition               |
+----------------------------------------------------------------------------------|
+<768px       |≥768px    |≥992px   |≥1200px      |Global                           |
+
+This is a little hard to wrap your head around so here is a handy cheat sheet. You'll mentally be in the GDW media query headspace, so when you need to find the corresponding bootstrap css class, this table may be helpful. 
+
+GDW        | Bootstrap
+----------------------
+Global     | *-lg
+@desktop   | *-md
+@tablet    | *-sm
+@mobile    | *-xs
+@mobile-xs | Global
+
+### Bootstrap Responsive Utility Classes
+
+Bootstrap has some very handy classes to use that response to Bootstrap's defined container sizes. You can find the documentation for it here: https://getbootstrap.com/docs/3.3/css/#responsive-utilities
+
+In a nutshell, use hidden-* or visible-* to hide or show elements at various breakpoints. These breakpoints are very literally designed however and you can't cascade them. So if you want an element to be hidden in the xs and sm breakpoints, it will need either `hidden-xs hidden-sm` or `visible-md visible-lg` in its class attribute.
+
 ### Pull Requests
-
-TBD
-
-### visible-xs, hidden-xs
-
-TBD
-
-
-### @desktop vs @screen-lg
 
 TBD
