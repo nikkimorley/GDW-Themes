@@ -33,9 +33,13 @@ For example, if you have a color variable of @themeColor1 and you want to lighte
 
 #### Four color functions and what they do:
 tint(color, percentage) - Mix color with white in variable proportion.
+
 shade(color, percentage) - Mix color with black in variable proportion.
+
 lighten(color, percentage) - Increase the lightness of a color in the HSL color space by an absolute amount.
+
 darken(color, percentage) - Decrease the lightness of a color in the HSL color space by an absolute amount.
+
 fade(color, percentage) - Set the absolute opacity of a color. Can be applied to colors whether they already have an opacity value or not.
 
 You can find more color functions in the LESS documents here: https://lesscss.org/functions/#color-operations
