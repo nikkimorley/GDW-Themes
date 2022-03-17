@@ -25,13 +25,35 @@ GDW is using a desktop first approach and using media queries to scale down. The
 There are also media queries in the bottom of styles.less reflecting our old method of media queries in themes. The preferred method of writing media queries within the class is preferred.
 
 
-### Lighten, Darken, Tint, Shade 
+### Color Functions
 
-TBD
+GDW uses five main color functions from LESS to modify colors. It's ideal to use these functions if you are trying to create a version of a color so that the code updates gracefully if the original color (defined in a variable) is being updated.
+
+For example, if you have a color variable of @themeColor1 and you want to lighten it a little on hover, it makes most sense to define in the hover definition `color: tint(@themeColor1, 10%)`. This color function will add 10% white to @themeColor1 and thus making it appear lighter. 
+
+#### Four color functions and what they do:
+tint(color, percentage) - Mix color with white in variable proportion.
+shade(color, percentage) - Mix color with black in variable proportion.
+lighten(color, percentage) - Increase the lightness of a color in the HSL color space by an absolute amount.
+darken(color, percentage) - Decrease the lightness of a color in the HSL color space by an absolute amount.
+fade(color, percentage) - Set the absolute opacity of a color. Can be applied to colors whether they already have an opacity value or not.
+
+You can find more color functions in the LESS documents here: https://lesscss.org/functions/#color-operations
 
 ### Retina and Images
 
-TBD
+Certain computers have a Retina display which are designed to show a sharper image. A Retina image is an image created specifically to look sharp on a Retina display. SVGs, since they are vector images, naturally look sharp on a Retina dislay. 
+
+For raster images like .jpgs and .pngs, they will need to be created at twice the size becuase we will need to double the amount of pixels in the display. The XD file will naturally have the retina display images ready for you when you download the image. The retina image will have @2x at the end of the name, before the extension.
+
+Note: If you change the name of an image, be sure to change it on both files but leave the @2x.
+### SVGs that need to be modify by user interaction
+
+Generally if you are linking an svg that is just acting like an image, you can simply link it via the <img> element.
+
+However, if you need to modify your svg via a user interaction (like a hover), you will need to include your svg code in the HTML itself which will give you control over the code.
+
+To do this, open the svg in VS Code and copy the code and paste the code where it will exist in the DOM (usually within a parent element to contain it).
 
 ### Responsive Sizing Cheat Sheet
 
@@ -71,4 +93,4 @@ In a nutshell, use hidden-* or visible-* to hide or show elements at various bre
 
 ### Pull Requests
 
-TBD
+TBD - I will make a process for this.
