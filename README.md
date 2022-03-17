@@ -63,27 +63,25 @@ Bootstsrap on the other hand, uses a mobile first approach, so global styles wil
 
 A visual representation of the info above:
 
-GDW - Desktop first Approach                                                      |
-----------------------------------------------------------------------------------|
-@mobile-xs   |@mobile   |@tablet   |@desktop    |No size definition               |
-----------------------------------------------------------------------------------|
-≤480px       |≤768px    |≤992px    |≤1200px     |>1200px & undefined breakpoints  |
-----------------------------------------------------------------------------------|
-Bootstrap - Mobile first approach                                                 |
-----------------------------------------------------------------------------------|
+#### GDW - Desktop first Approach     
+|@mobile-xs   |@mobile   |@tablet   |@desktop    |No size definition              |
+|-------------|:--------:|:--------:|:----------:|:------------------------------:|
+|≤480px       |≤768px    |≤992px    |≤1200px     |>1200px & undefined breakpoints |
+
+#### Bootstrap - Mobile first approach                                            
 *-xs         |*-sm      |*-md     |*-lg         |No size definition               |
-----------------------------------------------------------------------------------|
+|------------|:--------:|:--------:|:----------:|:-------------------------------:|
 <768px       |≥768px    |≥992px   |≥1200px      |Global                           |
 
 This is a little hard to wrap your head around so here is a handy cheat sheet. You'll mentally be in the GDW media query headspace, so when you need to find the corresponding bootstrap css class, this table may be helpful. 
 
-GDW        | Bootstrap
-----------------------
-Global     | *-lg
-@desktop   | *-md
-@tablet    | *-sm
-@mobile    | *-xs
-@mobile-xs | Global
+GDW        | Bootstrap |
+|----------|:---------:|
+Global     | *-lg.     |
+@desktop   | *-md      |
+@tablet    | *-sm      |
+@mobile    | *-xs      |
+@mobile-xs | Global    |
 
 ### Bootstrap Responsive Utility Classes
 
@@ -94,3 +92,4 @@ In a nutshell, use hidden-* or visible-* to hide or show elements at various bre
 ### Pull Requests
 
 TBD - I will make a process for this.
+
