@@ -287,17 +287,24 @@ a:hover {
     background: green;
   }
 }
+/*
+	TODO:
+	- Figure out z-index issue w/buttons
+*/
 .theme-btn {
   position: relative;
+  z-index: 1;
   display: inline-block;
-  margin-right: 15px;
+  margin: 0 15px;
   background: #EBC656;
   color: #000;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 1.5px;
-  padding: 30px 55px;
+  padding: 30px;
+  min-width: 357px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -316,11 +323,24 @@ a:hover {
   background: #40505A;
   color: #fff;
 }
+@media only screen and (max-width: 768px) {
+  .theme-btn {
+    min-width: auto;
+  }
+}
 .theme-headline {
   font-family: 'Arvo', sans-serif;
   font-size: 55px;
   line-height: 65px;
   margin-bottom: 30px;
+}
+.theme-subheadline {
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .theme-text {
   font-family: 'Mulish', sans-serif;
@@ -371,6 +391,21 @@ a:hover {
   background: url('images/banner.jpg') center / cover no-repeat;
   left: 50%;
   max-width: 50%;
+}
+#theme-custom-banner #about {
+  text-align: center;
+  padding: 63px 0 100px;
+  position: relative;
+  z-index: 0;
+}
+#theme-custom-banner #about .text-wrap {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 63px 15px;
+}
+#theme-custom-banner #about .theme-text {
+  max-width: 756px;
+  margin: 0 auto 50px;
 }
 #theme-custom-banner #services #services-img {
   background: url('images/services.jpg') center / cover no-repeat;
