@@ -294,13 +294,6 @@ a:hover {
     background: green;
   }
 }
-/*
-	TODO:
-	- Figure out z-index issue w/buttons
-	- figure out margin left on button not aligning
-	- fix right gap in mobile
-	- fix testimonials
-*/
 .theme-btn {
   position: relative;
   z-index: 1;
