@@ -147,6 +147,13 @@ Import this file into your stylesheet and you can use these classes to define el
 .bootstrap-flex-bottom {
   margin-top: auto;
 }
+@media only screen and (max-width: 768px) {
+  .bootstrap-flex-row,
+  .bootstrap-flex-col,
+  .bootstrap-flex-content {
+    display: block;
+  }
+}
 /* ------------------------------------------------------------ *\
 	Animations
 \* ------------------------------------------------------------ */
@@ -291,6 +298,8 @@ a:hover {
 	TODO:
 	- Figure out z-index issue w/buttons
 	- figure out margin left on button not aligning
+	- fix right gap in mobile
+	- fix testimonials
 */
 .theme-btn {
   position: relative;
@@ -451,6 +460,45 @@ a:hover {
 #theme-custom-banner #callouts .callout a:hover img {
   transform: scale(1.1);
 }
+#theme-custom-banner #testimonials {
+  padding-bottom: 100px;
+}
+#theme-custom-banner #testimonials .testimonial {
+  background: #EBEBEB;
+  border: solid 1px #40505A;
+  padding: 35px 70px;
+}
+#theme-custom-banner #testimonials .testimonial::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: -14px;
+  bottom: -19px;
+  background: #fff;
+  border: solid 1px #40505A;
+}
+#theme-custom-banner #testimonials .testimonial .testimonial-wrap {
+  position: relative;
+  padding-left: 70px;
+}
+#theme-custom-banner #testimonials .testimonial .testimonial-wrap img {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+#theme-custom-banner #testimonials .testimonial .testimonial-wrap .text {
+  font-size: 16px;
+  line-height: 20px;
+}
+#theme-custom-banner #testimonials .testimonial .testimonial-wrap .text .name {
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 #theme-custom-banner #callouts-2 .call-text {
   margin-bottom: 0;
   margin-top: 15px;
@@ -464,7 +512,6 @@ a:hover {
   text-align: center;
 }
 #theme-custom-banner #callouts-2 .callout a {
-  display: block;
   background: #EBC656;
   padding: 30px 15px;
   text-align: center;
