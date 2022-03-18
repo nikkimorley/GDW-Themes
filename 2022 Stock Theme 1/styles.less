@@ -24,8 +24,8 @@
 @body-color: #000;
 
 // Variables
-@links:@themeColor1;
-@hover: lighten(@links, 10%);
+@links: darken(@themeColor1, 20%);
+@hover: @themeColor3;
 
 // Include this in any class you want to transition
 .transition {
@@ -130,6 +130,7 @@ a {
 /*
 	TODO:
 	- Figure out z-index issue w/buttons
+	- figure out margin left on button not aligning
 */
 
 .theme-btn {
@@ -173,7 +174,7 @@ a {
 .theme-headline {
 	font-family: @font-headline;
 	font-size: 55px;
-	line-height: 65px;
+	line-height: 68px;
 	margin-bottom: 30px;
 }
 
@@ -191,6 +192,10 @@ a {
 	font-size: 20px;
 	letter-spacing: 2px;
 	line-height: 30px;
+}
+
+.shadow {
+	box-shadow: 0 8px 20px fade(#000, 20%);
 }
 
 // This is for dryer code in the banner and service modules
@@ -252,7 +257,7 @@ a {
 
 		.text-wrap {
 			background: #fff;
-			box-shadow: 0 8px 20px fade(#000, 20%);
+			.shadow;
 			padding: 63px 15px;
 		}
 
@@ -271,6 +276,72 @@ a {
 		.theme-text {
 			font-weight: 700;
 			text-transform: uppercase;
+		}
+	}
+
+	#callouts {
+		padding: 100px 0 80px;
+		.call-text {
+			background: #fff;
+			text-align: center;
+			color: #000;
+			padding: 30px 15px 50px;
+			margin-bottom: 0;
+		}
+		.img-wrap {
+			overflow: hidden;
+			img {
+				.transition;
+			}
+		}
+		.callout {
+			text-align: center;
+			a {
+				display: inline-block;
+				margin-bottom: 40px;
+				.shadow;
+	
+				&:hover {
+					box-shadow: none;
+					img {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+
+	#testimonials {
+
+	}
+
+	#callouts-2 {
+		.call-text {
+			margin-bottom: 0;
+			margin-top: 15px;
+			color: #000;
+		}
+		.img-wrap {
+			img {
+				margin: 0 auto;
+				transition: 1s all;
+			}
+		}
+		.callout {
+			text-align: center;
+			a {
+				display: block;
+				background: @themeColor1;
+				padding: 30px 15px;
+				text-align: center;
+				margin-bottom: 40px;
+	
+				&:hover {
+					img {
+						transform: rotateY(360deg);
+					}
+				}
+			}
 		}
 	}
 }

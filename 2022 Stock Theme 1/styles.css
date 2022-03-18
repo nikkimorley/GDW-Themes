@@ -211,12 +211,12 @@ body h6 {
   font-family: 'Arvo', sans-serif;
 }
 a {
-  color: #EBC656;
+  color: #c49917;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 a:hover {
-  color: #f0d584;
+  color: #40505A;
   text-decoration: none;
 }
 /* ==================================================================
@@ -290,6 +290,7 @@ a:hover {
 /*
 	TODO:
 	- Figure out z-index issue w/buttons
+	- figure out margin left on button not aligning
 */
 .theme-btn {
   position: relative;
@@ -331,7 +332,7 @@ a:hover {
 .theme-headline {
   font-family: 'Arvo', sans-serif;
   font-size: 55px;
-  line-height: 65px;
+  line-height: 68px;
   margin-bottom: 30px;
 }
 .theme-subheadline {
@@ -347,6 +348,9 @@ a:hover {
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 30px;
+}
+.shadow {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .picture-split-module {
   position: relative;
@@ -415,6 +419,59 @@ a:hover {
 #theme-custom-banner #services .theme-text {
   font-weight: 700;
   text-transform: uppercase;
+}
+#theme-custom-banner #callouts {
+  padding: 100px 0 80px;
+}
+#theme-custom-banner #callouts .call-text {
+  background: #fff;
+  text-align: center;
+  color: #000;
+  padding: 30px 15px 50px;
+  margin-bottom: 0;
+}
+#theme-custom-banner #callouts .img-wrap {
+  overflow: hidden;
+}
+#theme-custom-banner #callouts .img-wrap img {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+#theme-custom-banner #callouts .callout {
+  text-align: center;
+}
+#theme-custom-banner #callouts .callout a {
+  display: inline-block;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+#theme-custom-banner #callouts .callout a:hover {
+  box-shadow: none;
+}
+#theme-custom-banner #callouts .callout a:hover img {
+  transform: scale(1.1);
+}
+#theme-custom-banner #callouts-2 .call-text {
+  margin-bottom: 0;
+  margin-top: 15px;
+  color: #000;
+}
+#theme-custom-banner #callouts-2 .img-wrap img {
+  margin: 0 auto;
+  transition: 1s all;
+}
+#theme-custom-banner #callouts-2 .callout {
+  text-align: center;
+}
+#theme-custom-banner #callouts-2 .callout a {
+  display: block;
+  background: #EBC656;
+  padding: 30px 15px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#theme-custom-banner #callouts-2 .callout a:hover img {
+  transform: rotateY(360deg);
 }
 /* ==================================================================
 
