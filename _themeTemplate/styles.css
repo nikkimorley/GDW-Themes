@@ -147,6 +147,13 @@ Import this file into your stylesheet and you can use these classes to define el
 .bootstrap-flex-bottom {
   margin-top: auto;
 }
+@media only screen and (max-width: 768px) {
+  .bootstrap-flex-row,
+  .bootstrap-flex-col,
+  .bootstrap-flex-content {
+    display: block;
+  }
+}
 /* ------------------------------------------------------------ *\
 	Animations
 \* ------------------------------------------------------------ */
