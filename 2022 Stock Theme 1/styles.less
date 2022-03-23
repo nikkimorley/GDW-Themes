@@ -381,7 +381,44 @@ a {
 }
 
 #theme-bottom-banner {
-	
+	#schedule {
+		background-color: @themeColor1;
+		padding: 50px 0;
+
+		@media @desktop {
+			text-align: center;
+		}
+		.schedule-wrap {
+			display: flex;
+			justify-content: space-between;
+
+			@media @desktop {
+				display: block;
+			}
+		}
+		.text-wrap {
+			max-width: 650px;
+
+			@media @desktop {
+				max-width: 800px; 
+				margin: 0 auto 30px;
+			}
+
+			.theme-headline {
+				margin-bottom: 10px;
+			}
+		}
+		.button-wrap {
+			align-self: center;
+			.theme-btn {
+				background-color: @themeColor2;
+				&:hover {
+					background: @themeColor3;
+					color: #fff; 
+				}
+			}	
+		}
+	}
 }
 
 

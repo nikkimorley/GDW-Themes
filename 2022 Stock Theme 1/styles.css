@@ -513,6 +513,46 @@ a:hover {
 #theme-custom-banner #callouts-2 .callout a:hover img {
   transform: rotateY(360deg);
 }
+#theme-bottom-banner #schedule {
+  background-color: #EBC656;
+  padding: 50px 0;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-bottom-banner #schedule {
+    text-align: center;
+  }
+}
+#theme-bottom-banner #schedule .schedule-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-bottom-banner #schedule .schedule-wrap {
+    display: block;
+  }
+}
+#theme-bottom-banner #schedule .text-wrap {
+  max-width: 650px;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-bottom-banner #schedule .text-wrap {
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+}
+#theme-bottom-banner #schedule .text-wrap .theme-headline {
+  margin-bottom: 10px;
+}
+#theme-bottom-banner #schedule .button-wrap {
+  align-self: center;
+}
+#theme-bottom-banner #schedule .button-wrap .theme-btn {
+  background-color: #EBEBEB;
+}
+#theme-bottom-banner #schedule .button-wrap .theme-btn:hover {
+  background: #40505A;
+  color: #fff;
+}
 /* ==================================================================
 
 					// MOBILE MEDIA QUERIES
