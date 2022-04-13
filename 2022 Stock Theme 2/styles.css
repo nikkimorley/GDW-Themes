@@ -167,12 +167,26 @@ Import this file into your stylesheet and you can use these classes to define el
 /* ------------------------------------------------------------ *\
 	End Template File
 \* ------------------------------------------------------------ */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v47/TK3_WkUHHAIjg75cFRf3bXL8LICs1y9ogUE.ttf) format('truetype');
+}
 .transition {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -183,15 +197,15 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 a {
-  color: #000;
+  color: #ED4041;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 a:hover {
-  color: #1a1a1a;
+  color: #f16f6f;
   text-decoration: none;
 }
 /* ==================================================================
@@ -245,6 +259,73 @@ a:hover {
   .example-class {
     background: green;
   }
+}
+.headline-styles {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.theme-headline {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+.theme-btn {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 20px;
+  background-color: #ED4041;
+  padding: 15px 30px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.theme-btn:hover {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+}
+.theme-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+#theme-custom-banner {
+  background: black;
+}
+#theme-custom-banner .overlay {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#theme-custom-banner #banner {
+  background: url('images/banner.jpg');
+  position: relative;
+  z-index: 0;
+}
+#theme-custom-banner #banner::before {
+  z-index: -1;
+}
+#theme-custom-banner #banner2 {
+  position: relative;
+}
+#theme-custom-banner #banner::before,
+#theme-custom-banner #banner2::before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 /* ==================================================================
 

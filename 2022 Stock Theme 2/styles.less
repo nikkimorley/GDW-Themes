@@ -2,10 +2,12 @@
 @import '../template.less';
 
 // Font Link
-// @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@600&display=swap');
 
 // Font
-@font: 'Raleway', sans-serif;
+@font: 'Montserrat', sans-serif;
+@font-headline: 'Oswald', sans-serif;
+
 // Image Path
 @path: './images/';
 
@@ -16,12 +18,14 @@
 @mobile-xs: ~"only screen and (max-width: @{screen-xs})"; // smaller phones
 
 // Colors
-@primary: #000;
-@secondary: #000;
-@highlight: #000;
+@themeColor1: #ED4041;
+@themeColor2: #1A1A1A;
+@themeColor3: #000000;
+
+@white: #FFFFFF;
 
 // Variables
-@links:@primary;
+@links: @themeColor1;
 @hover: lighten(@links, 10%);
 
 // Include this in any class you want to transition
@@ -112,9 +116,63 @@ a {
 	
 }
 
+.headline-styles {
+	font-family: @font-headline;
+	font-weight: 600;
+	color: @white;
+	text-transform: uppercase;
+}
+.theme-headline {
+	.headline-styles;
+	font-size: 50px;
+}
+.theme-btn {
+	.headline-styles;
+	display: inline-block;
+	font-size: 20px;
+	background-color: @themeColor1;
+	padding: 15px 30px;
+	.transition;
+	&:hover {
+		background-color: @themeColor2;
+		color: @white;
+	}
+}
+
+.theme-text {
+	font-family: @font;
+	font-size: 20px;
+	color: @white;
+}
 // Custom Styles
 #theme-custom-banner {
-	
+	background: black;
+	.overlay {
+		content: '';
+		position: absolute;
+		background: fade(black, 70%);
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	#banner {
+		background: url('@{path}banner.jpg');
+		position: relative;
+		z-index: 0;
+		&::before {
+			z-index: -1;
+		}
+	}
+
+	#banner2 {
+		position: relative;
+	}
+	#banner, #banner2 {
+		&::before {
+			.overlay;
+		}
+	}
 }
 #theme-bottom-banner {
 	
