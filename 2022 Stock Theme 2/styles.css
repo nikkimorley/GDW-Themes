@@ -325,9 +325,6 @@ a:hover {
   max-width: 800px;
   margin: 0 auto 45px;
 }
-#theme-custom-banner #banner .theme-btn {
-  margin-top: 50px;
-}
 #theme-custom-banner #about {
   background: #000000 url('images/about-img.svg') bottom 65px left 15% / auto no-repeat;
   padding-top: 150px;
@@ -361,7 +358,8 @@ a:hover {
 }
 #theme-custom-banner #callouts {
   background: #1A1A1A;
-  padding: 55px;
+  padding: 60px;
+  margin: 0 auto 30px;
 }
 #theme-custom-banner #callouts .call {
   display: inline-block;
@@ -369,24 +367,21 @@ a:hover {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 1px;
   height: 240px;
   width: 240px;
-  padding: 45px 30px;
+  padding: 40px 30px;
   margin: 20px;
   background-color: #1A1A1A;
   border: 2px solid #ED4041;
   border-radius: 5px;
-  justify-content: space-between;
   text-transform: uppercase;
+}
+#theme-custom-banner #callouts .call a.call .img {
+  align-self: center;
 }
 #theme-custom-banner #callouts .call-text {
   text-align: center;
-  margin-top: 50px;
-}
-#theme-custom-banner #callouts .call.img::hover {
-  background-color: #ED4041;
-  color: #FFFFFF;
+  margin-top: 40px;
 }
 #theme-custom-banner #banner2 {
   position: relative;

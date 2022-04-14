@@ -163,7 +163,7 @@ a {
 		top: 0;
 		left: 0;
 	}
-
+	
 	#banner {
 		background: url('@{path}banner.jpg') center / cover no-repeat;
 		position: relative;
@@ -177,9 +177,6 @@ a {
 		.theme-headline {
 			max-width: 800px;
 			margin: 0 auto 45px;
-		}
-		.theme-btn {
-			margin-top: 50px;
 		}
 	}
 
@@ -217,43 +214,30 @@ a {
 
 	#callouts {
 		background: @themeColor2;
-		padding: 55px;
+		padding: 60px;
+		margin: 0 auto 30px;
 		.call {
 			display: inline-block;
 			position: relative;
 			font-family: @font-headline;
 			font-weight: 600;
 			font-size: 20px;
-			line-height: 1px;
 			height: 240px;
-			width: auto;
-			padding: 45px 30px;
-			margin: 25px;
+			width: 240px;
+			padding: 40px 30px;
+			margin: 20px;
 			background-color: @themeColor2;
 			border: 2px solid @themeColor1;
 			border-radius: 5px;
-			justify-content: space-between;
 			text-transform: uppercase;
-			a.call.img {
-				display: flex;
-				justify-content: center;
+			a.call .img {
+				align-self: center;
 			}
+		}
 		.call-text {
 			text-align: center;
-			margin-top: 50px;
+			margin-top: 40px;
 		}
-	}
-
-	#testimonial {
-		background: url('@{path}quote.svg') top 150px center / contain no-repeat;
-		position: relative;
-		padding-top: 150px;
-		padding-bottom: 120px;
-		margin: 0 auto 45px;
-		font-family: @font-headline;
-		font-size: 40px;
-		line-height: 50px;
-		letter-spacing: 2px;
 	}
 
 	#banner2 {
@@ -262,9 +246,10 @@ a {
 	#banner, #banner2 {
 		&::before {
 			.overlay;
-		}
+			}
 	}
 }
+
 #theme-bottom-banner {
 	
 }
