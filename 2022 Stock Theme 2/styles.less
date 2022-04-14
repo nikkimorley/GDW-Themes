@@ -229,8 +229,11 @@ a {
 			background-color: @themeColor2;
 			border: 2px solid @themeColor1;
 			border-radius: 5px;
-			text-transform: uppercase;
-			a.call .img {
+			text-transform: uppercase;	
+			//Stuck on getting the images to center, regardless of how I named the child element
+			a.call .img{
+				display: flex;
+				justify-content: center;
 				align-self: center;
 			}
 		}
