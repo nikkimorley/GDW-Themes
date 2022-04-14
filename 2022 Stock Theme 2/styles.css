@@ -272,6 +272,8 @@ a:hover {
   color: #FFFFFF;
   text-transform: uppercase;
   font-size: 50px;
+  letter-spacing: 2.5px;
+  line-height: 50px;
 }
 .theme-btn {
   font-family: 'Oswald', sans-serif;
@@ -280,8 +282,10 @@ a:hover {
   text-transform: uppercase;
   display: inline-block;
   font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 50px;
   background-color: #ED4041;
-  padding: 15px 30px;
+  padding: 5px 25px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -307,12 +311,82 @@ a:hover {
   left: 0;
 }
 #theme-custom-banner #banner {
-  background: url('images/banner.jpg');
+  background: url('images/banner.jpg') center / cover no-repeat;
   position: relative;
+  padding-top: 250px;
+  padding-bottom: 200px;
+  text-align: center;
   z-index: 0;
 }
 #theme-custom-banner #banner::before {
   z-index: -1;
+}
+#theme-custom-banner #banner .theme-headline {
+  max-width: 800px;
+  margin: 0 auto 45px;
+}
+#theme-custom-banner #banner .theme-btn {
+  margin-top: 50px;
+}
+#theme-custom-banner #about {
+  background: #000000 url('images/about-img.svg') bottom 65px left 15% / auto no-repeat;
+  padding-top: 150px;
+  padding-bottom: 130px;
+}
+#theme-custom-banner #about .about-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+#theme-custom-banner #about .theme-headline {
+  text-align: right;
+  padding-top: 10px;
+}
+#theme-custom-banner #about .theme-headline::after {
+  content: '';
+  display: block;
+  background-color: #ED4041;
+  width: 178px;
+  height: 10px;
+  float: right;
+  margin-top: 25px;
+}
+#theme-custom-banner #about .theme-text {
+  margin-bottom: 35px;
+}
+#theme-custom-banner #about #about-title {
+  width: 40%;
+}
+#theme-custom-banner #about #about-text {
+  width: 48%;
+}
+#theme-custom-banner #callouts {
+  background: #1A1A1A;
+  padding: 55px;
+}
+#theme-custom-banner #callouts .call {
+  display: inline-block;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1px;
+  height: 240px;
+  width: 240px;
+  padding: 45px 30px;
+  margin: 20px;
+  background-color: #1A1A1A;
+  border: 2px solid #ED4041;
+  border-radius: 5px;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+#theme-custom-banner #callouts .call-text {
+  text-align: center;
+  margin-top: 50px;
+}
+#theme-custom-banner #callouts .call.img::hover {
+  background-color: #ED4041;
+  color: #FFFFFF;
 }
 #theme-custom-banner #banner2 {
   position: relative;
