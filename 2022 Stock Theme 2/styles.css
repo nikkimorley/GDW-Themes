@@ -376,11 +376,6 @@ a:hover {
   border-radius: 5px;
   text-transform: uppercase;
 }
-#theme-custom-banner #callouts .call a.call .img {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
 #theme-custom-banner #callouts .call-text {
   text-align: center;
   margin-top: 40px;
