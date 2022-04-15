@@ -375,10 +375,25 @@ a:hover {
   border: 2px solid #ED4041;
   border-radius: 5px;
   text-transform: uppercase;
+  text-align: center;
 }
 #theme-custom-banner #callouts .call-text {
-  text-align: center;
   margin-top: 40px;
+}
+#theme-custom-banner #testimonial {
+  background: #000000 url('images/quote.svg') top 20px center / auto no-repeat;
+  padding-top: 85px;
+  margin: 100px auto 150px;
+}
+#theme-custom-banner #testimonial .theme-headline {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  text-align: center;
 }
 #theme-custom-banner #banner2 {
   position: relative;
