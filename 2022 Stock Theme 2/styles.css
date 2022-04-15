@@ -367,6 +367,15 @@ a:hover {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
   font-size: 20px;
+  /* 
+			Becky - Something we'll need to keep in mind for any stock theme is any client can put whatever they want in the text area. Sometimes this means our text wraps to two lines or even more. I like where your head is at for accuracy by making fixed heights and width, but we will need these sections to adapt to client changes and fixed heights especially aren't condusive to this. 
+			
+			There are a few approaches here you can take, but you may also want to consider the mobile breakpoints when choosing your approach. In desktop these are four across. However, in smaller screen sizes we usually move these to two rows of two and finally in mobile we move it all to one column. 
+
+			The best bet here would probably be some sort of flexbox solution in which you will need parent element to wrap the children (since you can't target .container due to platform conflicts). If you need help wrapping your head around this since it's pretty GDW specific, let me know.
+
+			Something you don't know that would be more clear if the XD file had a grid for the container: The callouts on the edges align with the edge of the container. Essentially this is like justify-content: space-between if you were targeting a parent flex item. Let me know if you need me to explain this better and I'll demo.
+			*/
   height: 240px;
   width: 240px;
   padding: 40px 30px;
@@ -376,14 +385,29 @@ a:hover {
   border-radius: 5px;
   text-transform: uppercase;
   text-align: center;
+  /* 
+			Becky - We already worked through this but just leaving this note for morning you. :) 
+			The a.call is unnecessary here since you are already in the element with the call class. However, this is where you'll need &:hover for the hover state.
+			*/
 }
 #theme-custom-banner #callouts .call-text {
+  /*
+			Becky - Since you are targeting .call-text here for the margin, it makes sense to put the font styling here as well. While it doesn't matter for the code rendering, it all works fine, it's easier for a dev to find .call-text and the corresponding styles.
+			
+			HOWEVER!!! Like all things code there is another way. You COULD leave the text styles where they are and instead target the img with a margin-bottom: 40px and avoid referencing .call-text altogether. Both ways achieve the same thing in this case. 
+			*/
   margin-top: 40px;
 }
 #theme-custom-banner #testimonial {
   background: #000000 url('images/quote.svg') top 20px center / auto no-repeat;
   padding-top: 85px;
+  /*
+		Becky - The margin here is unnecessary. Change the color on line 156 to see why. We'll end up removing line 156 later and only did this to see the text when setting up the layout so you may just want to keep the color something other than black.
+		*/
   margin: 100px auto 150px;
+  /*
+		Becky - I'm curious why you have repeated code here for .theme-headline. The font styles for .theme-headline that are common to all elements with .theme-headline are defined on line 126. We should only have changes .theme-headline if we are doing something different or an override like the font-size, letter-spacing, etc. that you have here. font-family, font-weight, color, etc are all duplicates. 
+		*/
 }
 #theme-custom-banner #testimonial .theme-headline {
   font-family: 'Oswald', sans-serif;
