@@ -172,7 +172,7 @@ Import this file into your stylesheet and you can use these classes to define el
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Oswald';
@@ -214,19 +214,54 @@ a:hover {
 
 ===================================================================== */
 /*=== fonts & reusable styles ==*/
-#main h1 {
-  font-size: 1.8em;
+#main {
+  background: #000000;
+  color: #FFFFFF;
+  text-align: center;
 }
-#main h2 {
-  font-size: 1.7em;
-}
-#main h3 {
-  font-size: 1.5em;
-}
+#main h1,
+#main h2,
+#main h3,
 #main h4,
 #main h5,
 #main h6 {
-  font-size: 1.5em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+#main h1 {
+  font-size: 50px;
+  letter-spacing: 2.5px;
+  line-height: 50px;
+}
+#main h1::after {
+  margin: 40px auto;
+}
+#main h2 {
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 32px;
+}
+#main h2::after {
+  margin: 30px auto;
+}
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+#main h1::after,
+#main h2::after {
+  content: '';
+  display: block;
+  background-color: #ED4041;
+  width: 178px;
+  height: 10px;
 }
 /* ==================================================================
 
@@ -286,6 +321,7 @@ a:hover {
   line-height: 50px;
   background-color: #ED4041;
   padding: 5px 25px;
+  text-align: center;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -299,7 +335,7 @@ a:hover {
   color: #FFFFFF;
 }
 #theme-custom-banner {
-  background: #1A1A1A;
+  background: orange;
 }
 #theme-custom-banner .overlay {
   content: '';
@@ -359,7 +395,6 @@ a:hover {
 #theme-custom-banner #callouts {
   background: #1A1A1A;
   padding: 60px;
-  margin: 0 auto 30px;
 }
 #theme-custom-banner #callouts .call {
   display: inline-block;
@@ -384,15 +419,17 @@ a:hover {
   margin-top: 40px;
 }
 #theme-custom-banner #testimonial {
-  background: #000000 url('images/quote.svg') top 20px center / auto no-repeat;
+  background: #000000;
   padding-top: 85px;
   padding-bottom: 100px;
 }
 #theme-custom-banner #testimonial .theme-headline {
+  background: url('images/quote.svg') top center / auto no-repeat;
   font-size: 40px;
   letter-spacing: 2px;
   line-height: 50px;
   text-align: center;
+  padding-top: 65px;
 }
 #theme-custom-banner #banner2 {
   position: relative;
@@ -406,6 +443,68 @@ a:hover {
   width: 100%;
   top: 0;
   left: 0;
+}
+#theme-custom-banner #phone {
+  background: #1A1A1A;
+  padding: 100px 0;
+}
+#theme-custom-banner #phone .phone-wrap {
+  display: flex;
+  justify-content: center;
+}
+#theme-custom-banner #phone .phone-wrap .phone-action {
+  margin-right: 20px;
+}
+#theme-custom-banner #phone .phone-wrap .theme-btn {
+  min-width: 275px;
+}
+#theme-bottom-banner #location {
+  background: #1A1A1A;
+  padding: 90px 0;
+}
+#theme-bottom-banner #location .loc-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+#theme-bottom-banner #location .loc-wrap .loc-info {
+  text-align: center;
+}
+#theme-bottom-banner #location .loc-wrap .loc-info .theme-headline::after {
+  content: '';
+  display: block;
+  background-color: #ED4041;
+  width: 178px;
+  height: 10px;
+  margin: 50px auto 30px;
+}
+#theme-bottom-banner #location .loc-wrap .loc-info .loc-address a {
+  display: block;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+}
+#theme-bottom-banner #location .loc-wrap .loc-info .loc-address a:hover {
+  color: #ED4041;
+}
+#theme-bottom-banner #location .loc-wrap .loc-info .loc-sub-headline {
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 32px;
+  margin: 35px auto;
+}
+#theme-bottom-banner #location .loc-wrap .loc-info ul {
+  color: #FFFFFF;
+  list-style-type: none;
+  padding: 0;
+}
+#theme-bottom-banner #location .loc-wrap #map {
+  background: url('images/map.jpg') center / cover no-repeat;
+  height: 457px;
+  width: 569px;
 }
 /* ==================================================================
 
