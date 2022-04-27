@@ -239,29 +239,48 @@ a {
 
 	#callouts {
 		background: @themeColor2;
-		padding: 60px;
-		.call {
-			display: inline-block;
+		padding: 60px 0;
+		.call-wrap {
+			display: flex;
 			justify-content: space-between;
-			padding: 40px 50px;
-			margin: 30px;
-			background-color: @themeColor2;
-			border: 2px solid @themeColor1;
-			border-radius: 5px;
-			text-transform: uppercase;
-			text-align: center;
-				&:hover {
-					cursor: pointer;
-					background-color: @themeColor1;
+			@media @desktop {
+				flex-wrap: wrap;
+			}
+			@media @mobile {
+				flex-direction: column;
+			}
+			.call {
+				display: inline-block;
+				padding: 40px 50px;
+				background-color: @themeColor2;
+				border: 2px solid @themeColor1;
+				border-radius: 5px;
+				text-transform: uppercase;
+				text-align: center;
+				margin: 20px 0;
+				width: 22%;
+					&:hover {
+						cursor: pointer;
+						background-color: @themeColor1;
+					}
+					@media @desktop {
+						width: 47%;
+					}
+					@media @mobile {
+						width: 100%;
+						max-width: 275px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				.call-text {
+					font-family: @font-headline;
+					font-weight: 600;
+					font-size: 20px;
+					color: @white;
+					margin-top: 40px;
 				}
-		}
-		.call-text {
-			font-family: @font-headline;
-			font-weight: 600;
-			font-size: 20px;
-			color: @white;
-			margin-top: 40px;
-		}
+			}
+		}	
 	}
 
 	#testimonial {
@@ -294,11 +313,21 @@ a {
 		.phone-wrap {
 			display: flex;
 			justify-content: center;
+			text-align: center;
+			@media @mobile {
+				flex-direction: column;
+			}
 			.phone-action {
 				margin-right: 20px;
+				@media @mobile {
+					margin-right: 0;
+				}
 			}
 			.theme-btn {
-				min-width: 275px;
+				width: 275px;
+				@media @mobile {
+					margin: 20px auto 0;
+				}
 			}
 		}
 	}
@@ -311,8 +340,18 @@ a {
 		.loc-wrap {
 			display: flex;
 			justify-content: space-between;
+			@media @mobile {
+				flex-direction: column;
+			}
+			.loc-info, .loc-map {
+				width: 50%;
+				@media @mobile {
+					width: 100%;
+				}
+			}
 			.loc-info {
 				text-align: center;
+				margin-bottom: 50px;
 				.theme-headline{
 					&::after {
 						content: '';
@@ -354,6 +393,9 @@ a {
 				background: url('@{path}map.jpg') center / cover no-repeat;
 				height: 457px;
 				width: 569px;
+				@media @desktop {
+					width: 100%;
+				}
 			}
 		}
 	}
