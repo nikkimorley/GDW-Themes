@@ -370,9 +370,21 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #about .about-wrap {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
 #theme-custom-banner #about .theme-headline {
   text-align: right;
   padding-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #about .theme-headline {
+    text-align: left;
+  }
 }
 #theme-custom-banner #about .theme-headline::after {
   content: '';
@@ -383,14 +395,30 @@ a:hover {
   float: right;
   margin-top: 25px;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #about .theme-headline::after {
+    margin: 25px auto 50px;
+    float: left;
+  }
+}
 #theme-custom-banner #about .theme-text {
   margin-bottom: 35px;
 }
 #theme-custom-banner #about #about-title {
   width: 40%;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #about #about-title {
+    width: 100%;
+  }
+}
 #theme-custom-banner #about #about-text {
   width: 48%;
+}
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #about #about-text {
+    width: 100%;
+  }
 }
 #theme-custom-banner #callouts {
   background: #1A1A1A;
@@ -539,7 +567,9 @@ a:hover {
 #theme-bottom-banner #location .loc-wrap .loc-info .loc-address a {
   display: block;
   color: #FFFFFF;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   font-size: 18px;
 }
 #theme-bottom-banner #location .loc-wrap .loc-info .loc-address a:hover {
@@ -557,6 +587,9 @@ a:hover {
 }
 #theme-bottom-banner #location .loc-wrap .loc-info ul {
   color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1.5px;
   list-style-type: none;
   padding: 0;
 }

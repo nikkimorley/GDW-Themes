@@ -212,10 +212,18 @@ a {
 		.about-wrap {
 			display: flex;
 			justify-content: space-between;
+			@media @mobile {
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+			}
 		}
 		.theme-headline {
 			text-align: right;
 			padding-top: 10px;
+			@media @mobile {
+				text-align: left;
+			}
 			&::after {
 				content: '';
 				display: block;
@@ -224,6 +232,10 @@ a {
 				height: 10px;
 				float: right;
 				margin-top: 25px;
+				@media @mobile {
+					margin: 25px auto 50px;
+					float: left;
+				}
 			}
 		}
 		.theme-text {
@@ -231,9 +243,15 @@ a {
 		}
 		#about-title {
 			width: 40%;
+			@media @mobile {
+				width: 100%;
+			}
 		}
 		#about-text {
 			width: 48%;
+			@media @mobile {
+				width: 100%;
+			}
 		}
 	}
 
@@ -366,7 +384,9 @@ a {
 					a {
 						display: block;
 						color: @white;
-						font-family: @font-headline;
+						font-family: @font;
+						font-weight: 600;
+						letter-spacing: 1.5px;
 						font-size: 18px;
 						&:hover {
 							color: @themeColor1;
@@ -385,6 +405,9 @@ a {
 				}
 				ul {
 					color: @white;
+					font-family: @font;
+					font-size: 15px;
+					letter-spacing: 1.5px;
 					list-style-type: none;
 					padding: 0;
 				}
