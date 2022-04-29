@@ -196,6 +196,10 @@ a {
 		padding-bottom: 200px;
 		text-align: center;
 		z-index: 0;
+
+		// I don't have what I had done but I am trying to size the background to fill better within mobile. Which I know is as a landscape image, it might not be possible. Or it is and I am missing something. I was thinking of adding a max-width and height just not sure if that is the way to go. 
+		
+
 		&::before {
 			z-index: -1;
 		}
@@ -250,6 +254,8 @@ a {
 				height: 10px;
 				float: right;
 				margin-top: 25px;
+
+				// My only other problem is getting this pseudo element to line up under the theme-headline. The size is great but no matter what I do with text-align, place-item, justify-content, etc.
 				@media @mobile {
 					margin-bottom: 50px;
 				}
