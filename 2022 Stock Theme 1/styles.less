@@ -129,7 +129,6 @@ a {
 
 .theme-btn {
 	position: relative;
-	z-index: 1;
 	display: inline-block;
 	margin: 0 15px;
 	background: @themeColor1;
@@ -218,6 +217,8 @@ a {
 	}
 
 	.text-wrap {
+		position: relative;
+		z-index: 0; //this is needed to play nicely with the button
 		padding: 100px 0 80px;
 
 		@media @desktop {
@@ -236,6 +237,9 @@ a {
 // Custom Styles
 #theme-custom-banner {
 	#banner {
+		.theme-btn {
+			margin-left: 0;
+		}
 		#banner-img {
 			background: url('@{path}banner.jpg')  center / cover no-repeat;
 			left: 50%;
@@ -251,6 +255,8 @@ a {
 
 		.text-wrap {
 			background: #fff;
+			position: relative;
+			z-index: 0;
 			.shadow;
 			padding: 63px 15px;
 		}
@@ -279,8 +285,10 @@ a {
 			background: #fff;
 			text-align: center;
 			color: #000;
-			padding: 30px 15px 50px;
+			padding: 30px 15px;
 			margin-bottom: 0;
+			font-size: 40px;
+			line-height: initial;
 		}
 		.img-wrap {
 			overflow: hidden;
@@ -311,6 +319,7 @@ a {
 			background: @themeColor2;
 			border: solid 1px @themeColor3;
 			padding: 35px 70px;
+			position: relative;
 
 			&::after {
 				content: "";
@@ -320,7 +329,7 @@ a {
 				height: 100%;
 				width: 100%;
 				right: -14px;
-				bottom: -19px;
+				bottom: -20px;
 				background: #fff;
 				border: solid 1px @themeColor3;
 			}
@@ -350,6 +359,7 @@ a {
 	}
 
 	#callouts-2 {
+		overflow: hidden;
 		.call-text {
 			margin-bottom: 0;
 			margin-top: 15px;
@@ -371,6 +381,10 @@ a {
 
 	
 				&:hover {
+					background: @themeColor3;
+					theme-headline {
+						color: #fff;
+					}
 					img {
 						transform: rotateY(360deg);
 					}
@@ -385,6 +399,10 @@ a {
 		background-color: @themeColor1;
 		padding: 50px 0;
 
+		.container {
+			overflow: visible;
+		}
+
 		@media @desktop {
 			text-align: center;
 		}
@@ -397,7 +415,10 @@ a {
 			}
 		}
 		.text-wrap {
-			max-width: 650px;
+			max-width: 690px;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
 
 			@media @desktop {
 				max-width: 800px; 
@@ -405,11 +426,17 @@ a {
 			}
 
 			.theme-headline {
-				margin-bottom: 10px;
+				margin-bottom: 0;
+			}
+
+			.theme-text {
+				margin-top: 10px;
 			}
 		}
 		.button-wrap {
 			align-self: center;
+			position: relative;
+			z-index: 0;
 			.theme-btn {
 				background-color: @themeColor2;
 				&:hover {
