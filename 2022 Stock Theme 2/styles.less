@@ -176,33 +176,33 @@ a {
 	color: @white;
 }
 
+.overlay {
+	position: relative;
+	&::before {
+			content: '';
+			position: absolute;
+			background: fade(black, 70%);
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+	}
+}
+
 // Custom Styles
 #theme-custom-banner {
-	background: orange;
-	.overlay {
-		content: '';
-		position: absolute;
-		background: fade(black, 70%);
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-	}
-	
 	#banner {
-		background: url('@{path}banner.jpg') center / cover no-repeat;
+		background: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.7)), url('@{path}banner.jpg') center / cover no-repeat;
 		position: relative;
 		padding-top: 250px;
 		padding-bottom: 200px;
 		text-align: center;
-		z-index: 0;
 
-		// I am trying to size the background to fill better within mobile. Which I know is as a landscape image, it might not be possible. Or it is and I am missing something. I was thinking of adding a max-width and height just not sure if that is the way to go. 
-		
-
-		&::before {
-			z-index: -1;
+		@media @mobile {
+			background: @themeColor2;
+			padding: 80px 0;
 		}
+		
 		.theme-headline {
 			max-width: 800px;
 			margin: 0 auto 45px;
@@ -233,11 +233,12 @@ a {
 			}
 		}
 		.theme-headline {
+			position: relative;
 			text-align: right;
 			padding-top: 10px;
+						padding-bottom: 35px;
 			@media @mobile {
 				text-align: center;
-				position: relative;
 				width: 100%;
 				max-width: 460px;
 				margin-left: auto;
@@ -247,25 +248,26 @@ a {
 				line-height: 45px; 
 			}
 			&::after {
+				position: absolute;
 				content: '';
 				display: block;
 				background-color: @themeColor1;
 				width: 178px;
 				height: 10px;
-				float: right;
-				margin-top: 25px;
+				right: 0;
+				bottom: 0;
 
-				// My only other problem is getting this pseudo element to line up under the theme-headline. The size is great but no matter what I do with text-align, place-item, justify-content, etc.
 				@media @mobile {
-					margin-bottom: 50px;
-				}
-				@media @mobile-xs {
-					float: left;
+					left: 50%;
+										transform: translateX(-50%);
 				}
 			}
 		}
 		.theme-text {
 			margin-bottom: 35px;
+			@media @mobile {
+					margin-top: 30px;
+			}
 		}
 		#about-title {
 			width: 40%;
@@ -348,16 +350,6 @@ a {
 				margin-right: auto;
 			}
 		}
-	}
-
-	#banner2 {
-		position: relative;
-	}
-
-	#banner, #banner2 {
-		&::before {
-			.overlay;
-			}
 	}
 
 	#phone {
