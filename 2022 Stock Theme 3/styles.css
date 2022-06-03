@@ -279,11 +279,9 @@ a:hover {
 }
 #theme-custom-banner #banner-img {
   background: url('images/banner.jpg') center / cover no-repeat;
-}
-#theme-custom-banner #banner-img .container {
   position: relative;
 }
-#theme-custom-banner #banner-img .container .theme-headline {
+#theme-custom-banner #banner-img .theme-headline {
   position: absolute;
   max-width: 800px;
   padding: 10px 15px;
