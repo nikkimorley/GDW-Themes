@@ -201,6 +201,7 @@ body h6 {
 }
 a {
   color: #BFCCDE;
+  font-size: 30px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -214,6 +215,15 @@ a:hover {
 
 ===================================================================== */
 /*=== fonts & reusable styles ==*/
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+  font-family: 'Karla', sans-serif;
+  color: #245367;
+}
 #main h1 {
   font-size: 1.8em;
 }
@@ -259,6 +269,24 @@ a:hover {
   .example-class {
     background: green;
   }
+}
+.theme-headline {
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #245367;
+}
+#theme-custom-banner #banner-img {
+  background: url('images/banner.jpg') center / cover no-repeat;
+}
+#theme-custom-banner #banner-img .container {
+  position: relative;
+}
+#theme-custom-banner #banner-img .container .theme-headline {
+  position: absolute;
+  max-width: 800px;
+  padding: 10px 15px;
 }
 /* ==================================================================
 

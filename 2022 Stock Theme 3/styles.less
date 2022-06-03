@@ -49,6 +49,7 @@ body {
 
 a {
 	color: @links;
+	font-size: 30px;
 	.transition;
 	&:hover {
 		color: @hover;
@@ -65,8 +66,8 @@ a {
 /*=== fonts & reusable styles ==*/
 #main {
 	h1, h2, h3, h4, h5, h6 {
-		// font-family: ;
-		// color: ;
+		font-family: @font;
+		color: @themeColor3;
 	}
 	h1 {
 		font-size: 1.8em;
@@ -114,10 +115,32 @@ a {
 	
 }
 
+.theme-headline {
+	font-family: @font;
+	font-size: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @themeColor3;
+}
+
 // Custom Styles
 #theme-custom-banner {
-	
+	#banner-img {
+		background: url('@{path}banner.jpg') center / cover no-repeat;
+
+		.container {
+			position: relative;
+
+			.theme-headline {
+				position: absolute;
+				max-width: 800px;
+				padding: 10px 15px;
+			}
+		}
+		
+	}	
 }
+
 #theme-bottom-banner {
 	
 }
