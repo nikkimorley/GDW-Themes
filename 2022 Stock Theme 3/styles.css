@@ -278,7 +278,12 @@ a:hover {
   color: #245367;
 }
 #theme-custom-banner #banner {
-  background: url('images/banner.jpg') center / cover no-repeat;
+  background: url('images/banner1.jpg') center / cover no-repeat;
+}
+@media only screen and (max-width: 992px) {
+  #theme-custom-banner #banner {
+    background: none;
+  }
 }
 #theme-custom-banner #banner .theme-headline {
   max-width: 700px;

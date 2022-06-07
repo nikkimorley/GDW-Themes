@@ -126,7 +126,11 @@ a {
 // Custom Styles
 #theme-custom-banner {
 	#banner {
-		background: url('images/banner.jpg') center / cover no-repeat;
+		background: url('@{path}banner1.jpg') center / cover no-repeat;
+
+		@media @tablet {
+			background: none;
+		  }
 
 		.theme-headline {
 			max-width: 700px;
