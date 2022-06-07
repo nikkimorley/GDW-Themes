@@ -277,13 +277,11 @@ a:hover {
   text-transform: uppercase;
   color: #245367;
 }
-#theme-custom-banner #banner-img {
+#theme-custom-banner #banner {
   background: url('images/banner.jpg') center / cover no-repeat;
-  position: relative;
 }
-#theme-custom-banner #banner-img .theme-headline {
-  position: absolute;
-  max-width: 800px;
+#theme-custom-banner #banner .theme-headline {
+  max-width: 700px;
   padding: 10px 15px;
 }
 /* ==================================================================
