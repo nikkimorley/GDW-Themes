@@ -277,8 +277,19 @@ a:hover {
   text-transform: uppercase;
   color: #245367;
 }
+.theme-btn {
+  border: 2px solid #245367;
+  color: #245367;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 25px;
+  width: 231px;
+}
 #theme-custom-banner #banner {
   background: url('images/banner1.jpg') center / cover no-repeat;
+  padding-top: 130px;
+  padding-bottom: 140px;
+  text-align: center;
 }
 @media only screen and (max-width: 992px) {
   #theme-custom-banner #banner {
@@ -286,8 +297,43 @@ a:hover {
   }
 }
 #theme-custom-banner #banner .theme-headline {
+  margin: 0 auto 55px;
   max-width: 700px;
-  padding: 10px 15px;
+  padding: 15px 45px;
+  background-color: #BFCCDE;
+}
+#theme-custom-banner #about-services {
+  background: #245367;
+  padding-top: 75px;
+  padding-bottom: 65px;
+  text-align: center;
+}
+#theme-custom-banner #about-services .theme-headline {
+  color: #FFFFFF;
+  font-size: 30px;
+  padding: 25px;
+}
+#theme-custom-banner #about-services .theme-headline::after {
+  content: '';
+  display: block;
+  background-color: #BFCCDE;
+  width: 178px;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+}
+#theme-custom-banner #about-services .theme-text,
+#theme-custom-banner #about-services .ftd-services {
+  color: #FFFFFF;
+  font-size: 15px;
+  margin: 0 auto 25px;
+}
+#theme-custom-banner #about-services .ftd-services ul {
+  list-style: none;
+}
+#theme-custom-banner #about-services .theme-btn {
+  border: 2px solid #BFCCDE;
+  color: #BFCCDE;
 }
 /* ==================================================================
 

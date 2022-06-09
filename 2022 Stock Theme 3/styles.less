@@ -123,18 +123,70 @@ a {
 	color: @themeColor3;
 }
 
+.theme-btn {
+	border: 2px solid @themeColor3;
+	color: @themeColor3;
+	font-size: 30px;
+	font-weight: 700;
+	padding: 25px;
+	width: 231px;
+}
+
 // Custom Styles
 #theme-custom-banner {
 	#banner {
 		background: url('@{path}banner1.jpg') center / cover no-repeat;
+		padding-top: 130px;
+		padding-bottom: 140px;
+		text-align: center;
 
 		@media @tablet {
 			background: none;
 		  }
 
 		.theme-headline {
+			margin: 0 auto 55px;
 			max-width: 700px;
-			padding: 10px 15px;
+			padding: 15px 45px;
+			background-color: @themeColor1;
+		}
+	}
+
+	#about-services {
+		background: @themeColor3;
+		padding-top: 75px;
+		padding-bottom: 65px;
+		text-align: center;
+
+		.theme-headline {
+			color: @white;
+			font-size: 30px;
+			padding: 25px;
+			&::after {
+				content: '';
+				display: block;
+				background-color: @themeColor1;
+				width: 178px;
+				height: 2px;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		.theme-text,
+		.ftd-services {
+			color: @white;
+			font-size: 15px;
+			margin: 0 auto 25px;
+		}
+
+		.ftd-services ul {
+			list-style: none;
+		}
+
+		.theme-btn {
+			border: 2px solid @themeColor1;
+			color: @themeColor1;
 		}
 	}
 }
