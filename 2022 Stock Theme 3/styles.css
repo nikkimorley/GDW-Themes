@@ -321,6 +321,8 @@ a:hover {
   height: 2px;
   right: 0;
   bottom: 0;
+  align-items: center;
+  transform: translate(50%);
 }
 #theme-custom-banner #about-services .theme-text,
 #theme-custom-banner #about-services .ftd-services {
@@ -334,6 +336,10 @@ a:hover {
 #theme-custom-banner #about-services .theme-btn {
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
+}
+#theme-custom-banner #values {
+  margin: 55px;
+  padding: 45px;
 }
 /* ==================================================================
 

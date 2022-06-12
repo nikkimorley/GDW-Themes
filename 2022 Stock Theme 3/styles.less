@@ -156,7 +156,9 @@ a {
 		}
 	}
 
-	// I am still working on this and the other sections.
+	//I am stuck on getting the vertical line down the center, I know it is built the same way using the &::before or &::after, but not sure which element to place it on. I know it will also only be used for desktop mode since the layout changes with tablet and below. 
+	
+	//I think somewhere in here I should be incorparting the id about title and about text. That will help with some of these problem I am having. I will be working on this more when I get home tonight after the meeting and this week.  
 	#about-services {
 		background: @themeColor3;
 		padding-top: 75px;
@@ -167,6 +169,7 @@ a {
 			color: @white;
 			font-size: 30px;
 			padding: 25px;
+			//Here I am stuck on getting the horizaontal line under both headlines. I was able to get one line with each headline using inline-block as it is inline with the headline (as it should) but that does not put it where I want it. 
 			&::after {
 				content: '';
 				display: block;
@@ -175,6 +178,8 @@ a {
 				height: 2px;
 				right: 0;
 				bottom: 0;
+				align-items: center;
+				transform: translate(50%);
 			}
 		}
 
@@ -192,6 +197,15 @@ a {
 		.theme-btn {
 			border: 2px solid @themeColor1;
 			color: @themeColor1;
+		}
+	}
+
+	#values {
+		margin: 55px;
+		padding: 45px;
+
+		.theme-headline {
+
 		}
 	}
 }
