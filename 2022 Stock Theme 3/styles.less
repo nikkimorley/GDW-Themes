@@ -180,7 +180,7 @@ a {
 		.ftd-services {
 			color: @white;
 			font-size: 15px;
-			
+
 			&::before {
 				content: '';
 				display: inline-block;
@@ -207,10 +207,31 @@ a {
 
 	#values {
 		
+		.theme-headline {
+			background-color: @themeColor1;
+		}
+
+		.values-text {
+			white-space: pre;
+		}
 	}
 
 	#callouts {
-		
+		text-align: center;
+
+		.call-text {
+			color: @themeColor3;
+			background-color: @themeColor1;
+			font-weight: 700;
+			padding: 15px;
+		}
+	}
+
+	#services {
+
+		.spc-services-text {
+			white-space: pre;
+		}
 	}
 }
 

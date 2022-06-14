@@ -342,6 +342,24 @@ a:hover {
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
 }
+#theme-custom-banner #values .theme-headline {
+  background-color: #BFCCDE;
+}
+#theme-custom-banner #values .values-text {
+  white-space: pre;
+}
+#theme-custom-banner #callouts {
+  text-align: center;
+}
+#theme-custom-banner #callouts .call-text {
+  color: #245367;
+  background-color: #BFCCDE;
+  font-weight: 700;
+  padding: 15px;
+}
+#theme-custom-banner #services .spc-services-text {
+  white-space: pre;
+}
 /* ==================================================================
 
 					// MOBILE MEDIA QUERIES
