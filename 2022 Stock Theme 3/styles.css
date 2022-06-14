@@ -313,25 +313,30 @@ a:hover {
   font-size: 30px;
   padding: 25px;
 }
-#theme-custom-banner #about-services .theme-headline::after {
+#theme-custom-banner #about-services .theme-text {
+  white-space: pre;
+  text-align: left;
+}
+#theme-custom-banner #about-services .theme-text,
+#theme-custom-banner #about-services .ftd-services {
+  color: #FFFFFF;
+  font-size: 15px;
+}
+#theme-custom-banner #about-services .theme-text::before,
+#theme-custom-banner #about-services .ftd-services::before {
   content: '';
-  display: block;
+  display: inline-block;
   background-color: #BFCCDE;
   width: 178px;
   height: 2px;
   right: 0;
   bottom: 0;
   align-items: center;
-  transform: translate(50%);
-}
-#theme-custom-banner #about-services .theme-text,
-#theme-custom-banner #about-services .ftd-services {
-  color: #FFFFFF;
-  font-size: 15px;
-  margin: 0 auto 25px;
 }
 #theme-custom-banner #about-services .ftd-services ul {
   list-style: none;
+  font-size: 20px;
+  font-weight: 700;
 }
 #theme-custom-banner #about-services .theme-btn {
   border: 2px solid #BFCCDE;

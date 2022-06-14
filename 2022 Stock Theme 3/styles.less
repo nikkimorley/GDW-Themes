@@ -169,29 +169,34 @@ a {
 			color: @white;
 			font-size: 30px;
 			padding: 25px;
-			//Here I am stuck on getting the horizaontal line under both headlines. I was able to get one line with each headline using inline-block as it is inline with the headline (as it should) but that does not put it where I want it. 
-			&::after {
-				content: '';
-				display: block;
-				background-color: @themeColor1;
-				width: 178px;
-				height: 2px;
-				right: 0;
-				bottom: 0;
-				align-items: center;
-				transform: translate(50%);
-			}
+		}
+
+		.theme-text {
+			white-space: pre;
+			text-align: left;
 		}
 
 		.theme-text,
 		.ftd-services {
 			color: @white;
 			font-size: 15px;
-			margin: 0 auto 25px;
+			
+			&::before {
+				content: '';
+				display: inline-block;
+				background-color: @themeColor1;
+				width: 178px;
+				height: 2px;
+				right: 0;
+				bottom: 0;
+				align-items: center;
+			}
 		}
 
 		.ftd-services ul {
 			list-style: none;
+			font-size: 20px;
+			font-weight: 700;
 		}
 
 		.theme-btn {
