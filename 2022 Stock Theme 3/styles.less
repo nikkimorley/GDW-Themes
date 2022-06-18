@@ -182,15 +182,24 @@ a {
 		text-align: center;
 
 		.about-wrap {
-			display: flex;
+			display: flex; 
+
+			@media @mobile {
+				flex-direction: column; //set the direction of the children (.about-item) to be column. flex-wrap: wrap also works
+			}
 		}
 
 		.about-item {
+			// child properties for .about-item as it relates to .about-wrap
 			display: flex;
-			flex-direction: column;
-			position: relative;
-			flex-basis: 50%;
-			padding-bottom: 116px;
+			flex-basis: 50%; // keeps the direct children of .about-parent at 50% each
+			// parent properties for the contents of .about-item
+			flex-direction: column; // aligns the items vertically
+			flex-wrap: wrap; // prevents items from taking up full width of .about-item
+
+			@media @mobile {
+				flex-basis: 100%; // set the width to be 100% of .about-wrap's width now that it's a column layout
+			}
 		}
 
 		.about-headline {
@@ -222,11 +231,14 @@ a {
 			margin: 0;
 		}
 
+		.theme-text,
+		.ftd-services {
+			margin-bottom: 30px; // to allow a gap since the margin-top is used on the button already
+		}
+
 		.theme-btn {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
+			align-self: center; // centers the button left and right in the column flow
+			margin-top: auto; // fixes the button to the bottom
 			border: 2px solid @themeColor1;
 			color: @themeColor1;
 				&:hover {
