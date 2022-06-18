@@ -286,6 +286,10 @@ a:hover {
   padding: 25px;
   text-align: center;
 }
+.theme-btn:hover {
+  background: #245367;
+  color: #FFFFFF;
+}
 #theme-custom-banner #banner {
   background: url('images/banner1.jpg') center / cover no-repeat;
 }
@@ -352,6 +356,10 @@ a:hover {
 #theme-custom-banner #about-services .theme-btn {
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
+}
+#theme-custom-banner #about-services .theme-btn:hover {
+  background: #BFCCDE;
+  color: #245367;
 }
 #theme-custom-banner #values {
   margin: 150px 135px;
