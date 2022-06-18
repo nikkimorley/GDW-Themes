@@ -278,28 +278,40 @@ a:hover {
   color: #245367;
 }
 .theme-btn {
+  display: inline-block;
   border: 2px solid #245367;
   color: #245367;
   font-size: 30px;
   font-weight: 700;
   padding: 25px;
-  width: 231px;
+  text-align: center;
 }
 #theme-custom-banner #banner {
   background: url('images/banner1.jpg') center / cover no-repeat;
-  padding-top: 130px;
-  padding-bottom: 140px;
-  text-align: center;
+}
+#theme-custom-banner #banner .banner-img {
+  display: none;
+}
+#theme-custom-banner #banner .banner-wrap {
+  max-width: 450px;
+  padding: 145px 0;
 }
 @media only screen and (max-width: 992px) {
   #theme-custom-banner #banner {
     background: none;
+    text-align: center;
+  }
+  #theme-custom-banner #banner .banner-img {
+    display: block;
+  }
+  #theme-custom-banner #banner .banner-wrap {
+    padding: 85px 0;
+    margin: 0 auto;
   }
 }
 #theme-custom-banner #banner .theme-headline {
-  margin: 0 auto 55px;
-  max-width: 700px;
-  padding: 15px 45px;
+  margin-bottom: 30px;
+  padding: 15px 40px;
   background-color: #BFCCDE;
 }
 #theme-custom-banner #about-services {
@@ -314,7 +326,6 @@ a:hover {
   padding: 30px;
 }
 #theme-custom-banner #about-services .theme-text {
-  white-space: pre;
   text-align: left;
 }
 #theme-custom-banner #about-services .theme-text,
@@ -353,9 +364,6 @@ a:hover {
 #theme-custom-banner #values .theme-headline {
   background: 1px #BFCCDE;
 }
-#theme-custom-banner #values .values-text {
-  white-space: pre;
-}
 #theme-custom-banner #callouts {
   text-align: center;
 }
@@ -364,9 +372,6 @@ a:hover {
   background-color: #BFCCDE;
   font-weight: 700;
   padding: 15px;
-}
-#theme-custom-banner #services .spc-services-text {
-  white-space: pre;
 }
 /* ==================================================================
 

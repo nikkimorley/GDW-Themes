@@ -124,41 +124,46 @@ a {
 }
 
 .theme-btn {
+	display: inline-block;
 	border: 2px solid @themeColor3;
 	color: @themeColor3;
 	font-size: 30px;
 	font-weight: 700;
 	padding: 25px;
-	width: 231px;
+	text-align: center;
 }
 
 // Custom Styles
 #theme-custom-banner {
 	#banner {
-		// I am soley focusing on desktop first before moving into the bootstrap classes and such for tablet through mobile.
-
-		//I am stuck on getting the image to be full size. I know we've talked about that and I did those things. When I added the bootstrap col option it helped but it is still being cut off. I've also done but margin and padding but margin just makes it worse.
 		background: url('@{path}banner1.jpg') center / cover no-repeat;
-		padding-top: 130px;
-		padding-bottom: 140px;
-		text-align: center;
 
+		.banner-img {
+			display: none;
+		}
+		.banner-wrap {
+			max-width: 450px;
+			padding: 145px 0;
+		}
 		@media @tablet {
 			background: none;
+			text-align: center;
+			.banner-img {
+				display: block;
+			}
+			.banner-wrap {
+				padding: 85px 0;
+				margin: 0 auto;
+			}
 		  }
-
-		  //My struggle with this is I cannot get the text to be lined up correctly in the image. I'm also unable to add the line break. Is there a bootstrap col class I should be looking at? When I have tried it, it messes with the background image. Also the padding and margins do not seem to make much of a difference. 
+		
 		.theme-headline {
-			margin: 0 auto 55px;
-			max-width: 700px;
-			padding: 15px 45px;
+			margin-bottom: 30px;
+			padding: 15px 40px;
 			background-color: @themeColor1;
 		}
 	}
 
-	//I am stuck on getting the vertical line down the center, I know it is built the same way using the &::before or &::after, but not sure which element to place it on. I know it will also only be used for desktop mode since the layout changes with tablet and below. 
-	
-	//I think somewhere in here I should be incorparting the id about title and about text. That will help with some of these problem I am having. I will be working on this more when I get home tonight after the meeting and this week.  
 	#about-services {
 		background: @themeColor3;
 		padding-top: 75px;
@@ -172,7 +177,6 @@ a {
 		}
 
 		.theme-text {
-			white-space: pre;
 			text-align: left;
 		}
 
@@ -217,10 +221,6 @@ a {
 		.theme-headline {
 			background: 1px @themeColor1;
 		}
-
-		.values-text {
-			white-space: pre;
-		}
 	}
 
 	#callouts {
@@ -236,9 +236,6 @@ a {
 
 	#services {
 
-		.spc-services-text {
-			white-space: pre;
-		}
 	}
 }
 
