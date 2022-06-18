@@ -311,7 +311,7 @@ a:hover {
 #theme-custom-banner #about-services .theme-headline {
   color: #FFFFFF;
   font-size: 30px;
-  padding: 25px;
+  padding: 30px;
 }
 #theme-custom-banner #about-services .theme-text {
   white-space: pre;
@@ -342,8 +342,16 @@ a:hover {
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
 }
+#theme-custom-banner #values {
+  margin: 150px 135px;
+}
+#theme-custom-banner #values .grid-img {
+  height: 251px;
+  width: 526px;
+  float: right;
+}
 #theme-custom-banner #values .theme-headline {
-  background-color: #BFCCDE;
+  background: 1px #BFCCDE;
 }
 #theme-custom-banner #values .values-text {
   white-space: pre;
