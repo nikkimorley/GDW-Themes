@@ -186,9 +186,11 @@ a {
 		}
 
 		.about-item {
+			display: flex;
+			flex-direction: column;
 			position: relative;
 			flex-basis: 50%;
-			padding-bottom: 116px; 
+			padding-bottom: 116px;
 		}
 
 		.about-headline {
@@ -235,14 +237,8 @@ a {
 	}
 
 	#values {
-		margin: 150px 135px;
+		// background: url('@{path}repeat-grid-5.svg') right 65% top 75% / auto no-repeat;
 		
-		.grid-img {
-			height: 251px;
-			width: 526px;
-			float: right;
-		}
-
 		.theme-headline {
 			background: 1px @themeColor1;
 		}
@@ -257,10 +253,6 @@ a {
 			font-weight: 700;
 			padding: 15px;
 		}
-	}
-
-	#services {
-
 	}
 }
 
