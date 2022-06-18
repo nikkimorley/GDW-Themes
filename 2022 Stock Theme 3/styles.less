@@ -137,6 +137,9 @@ a {
 	}
 }
 
+
+
+
 // Custom Styles
 #theme-custom-banner {
 	#banner {
@@ -174,26 +177,34 @@ a {
 		padding-bottom: 65px;
 		text-align: center;
 
+		.about-wrap {
+			display: flex;
+		}
+
+		.about-item {
+			flex-grow: 1;
+		}
+
 		.theme-headline {
 			color: @white;
 			font-size: 30px;
 			padding: 30px;
 		}
-		
+
 		.theme-text,
 		.ftd-services {
 			color: @white;
 			font-size: 15px;
-			&::before {
-				content: '';
-				display: inline-block;
-				background-color: @themeColor1;
-				width: 178px;
-				height: 2px;
-				right: 0;
-				bottom: 0;
-				align-items: center;
-			}
+			// &::before {
+			// 	content: '';
+			// 	display: inline-block;
+			// 	background-color: @themeColor1;
+			// 	width: 178px;
+			// 	height: 2px;
+			// 	right: 0;
+			// 	bottom: 0;
+			// 	align-items: center;
+			// }
 		}
 
 		.ftd-services ul {

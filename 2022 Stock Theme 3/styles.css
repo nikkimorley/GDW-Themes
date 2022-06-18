@@ -324,6 +324,12 @@ a:hover {
   padding-bottom: 65px;
   text-align: center;
 }
+#theme-custom-banner #about-services .about-wrap {
+  display: flex;
+}
+#theme-custom-banner #about-services .about-item {
+  flex-grow: 1;
+}
 #theme-custom-banner #about-services .theme-headline {
   color: #FFFFFF;
   font-size: 30px;
@@ -333,17 +339,6 @@ a:hover {
 #theme-custom-banner #about-services .ftd-services {
   color: #FFFFFF;
   font-size: 15px;
-}
-#theme-custom-banner #about-services .theme-text::before,
-#theme-custom-banner #about-services .ftd-services::before {
-  content: '';
-  display: inline-block;
-  background-color: #BFCCDE;
-  width: 178px;
-  height: 2px;
-  right: 0;
-  bottom: 0;
-  align-items: center;
 }
 #theme-custom-banner #about-services .ftd-services ul {
   list-style: none;
