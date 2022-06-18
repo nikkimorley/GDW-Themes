@@ -49,7 +49,6 @@ body {
 
 a {
 	color: @links;
-	font-size: 30px;
 	.transition;
 	&:hover {
 		color: @hover;
@@ -123,13 +122,18 @@ a {
 	color: @themeColor3;
 }
 
+.theme-tect {
+	font-size: 15px;
+	color: @themeColor3;
+}
+
 .theme-btn {
 	display: inline-block;
 	border: 2px solid @themeColor3;
 	color: @themeColor3;
 	font-size: 30px;
 	font-weight: 700;
-	padding: 25px;
+	padding: 20px 25px;
 	text-align: center;
 	&:hover {
 		background: @themeColor3;
@@ -182,38 +186,45 @@ a {
 		}
 
 		.about-item {
-			flex-grow: 1;
+			position: relative;
+			flex-basis: 50%;
+			padding-bottom: 116px; 
 		}
 
-		.theme-headline {
+		.about-headline {
 			color: @white;
 			font-size: 30px;
-			padding: 30px;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-top: 25px;
+			&::after {
+				content: '';
+				display: block;
+				background-color: @themeColor1;
+				width: 178px;
+				height: 2px;
+				margin: 25px auto;
+			}
 		}
 
-		.theme-text,
-		.ftd-services {
+		.theme-text {
 			color: @white;
-			font-size: 15px;
-			// &::before {
-			// 	content: '';
-			// 	display: inline-block;
-			// 	background-color: @themeColor1;
-			// 	width: 178px;
-			// 	height: 2px;
-			// 	right: 0;
-			// 	bottom: 0;
-			// 	align-items: center;
-			// }
+			text-align: left;
 		}
 
 		.ftd-services ul {
 			list-style: none;
 			font-size: 20px;
 			font-weight: 700;
+			padding: 0;
+			margin: 0;
 		}
 
 		.theme-btn {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
 			border: 2px solid @themeColor1;
 			color: @themeColor1;
 				&:hover {

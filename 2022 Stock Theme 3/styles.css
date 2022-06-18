@@ -201,7 +201,6 @@ body h6 {
 }
 a {
   color: #BFCCDE;
-  font-size: 30px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -277,13 +276,17 @@ a:hover {
   text-transform: uppercase;
   color: #245367;
 }
+.theme-tect {
+  font-size: 15px;
+  color: #245367;
+}
 .theme-btn {
   display: inline-block;
   border: 2px solid #245367;
   color: #245367;
   font-size: 30px;
   font-weight: 700;
-  padding: 25px;
+  padding: 20px 25px;
   text-align: center;
 }
 .theme-btn:hover {
@@ -328,24 +331,41 @@ a:hover {
   display: flex;
 }
 #theme-custom-banner #about-services .about-item {
-  flex-grow: 1;
+  position: relative;
+  flex-basis: 50%;
+  padding-bottom: 116px;
 }
-#theme-custom-banner #about-services .theme-headline {
+#theme-custom-banner #about-services .about-headline {
   color: #FFFFFF;
   font-size: 30px;
-  padding: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 25px;
 }
-#theme-custom-banner #about-services .theme-text,
-#theme-custom-banner #about-services .ftd-services {
+#theme-custom-banner #about-services .about-headline::after {
+  content: '';
+  display: block;
+  background-color: #BFCCDE;
+  width: 178px;
+  height: 2px;
+  margin: 25px auto;
+}
+#theme-custom-banner #about-services .theme-text {
   color: #FFFFFF;
-  font-size: 15px;
+  text-align: left;
 }
 #theme-custom-banner #about-services .ftd-services ul {
   list-style: none;
   font-size: 20px;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
 #theme-custom-banner #about-services .theme-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
 }
