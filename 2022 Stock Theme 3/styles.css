@@ -270,13 +270,16 @@ a:hover {
   }
 }
 .theme-headline {
+  display: inline-block;
   font-family: 'Karla', sans-serif;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
   color: #245367;
+  padding: 15px 40px;
+  background-color: #BFCCDE;
 }
-.theme-tect {
+.theme-text {
   font-size: 15px;
   color: #245367;
 }
@@ -318,8 +321,6 @@ a:hover {
 }
 #theme-custom-banner #banner .theme-headline {
   margin-bottom: 30px;
-  padding: 15px 40px;
-  background-color: #BFCCDE;
 }
 #theme-custom-banner #about-services {
   background: #245367;
@@ -386,8 +387,8 @@ a:hover {
   background: #BFCCDE;
   color: #245367;
 }
-#theme-custom-banner #values .theme-headline {
-  background: 1px #BFCCDE;
+#theme-custom-banner #values {
+  background: url('images/repeat-grid-5.svg') right -150px top -85px / auto no-repeat;
 }
 #theme-custom-banner #callouts {
   text-align: center;

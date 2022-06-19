@@ -115,14 +115,17 @@ a {
 }
 
 .theme-headline {
+	display: inline-block;
 	font-family: @font;
 	font-size: 40px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: @themeColor3;
+	padding: 15px 40px;
+	background-color: @themeColor1;
 }
 
-.theme-tect {
+.theme-text {
 	font-size: 15px;
 	color: @themeColor3;
 }
@@ -170,8 +173,6 @@ a {
 		
 		.theme-headline {
 			margin-bottom: 30px;
-			padding: 15px 40px;
-			background-color: @themeColor1;
 		}
 	}
 
@@ -249,11 +250,8 @@ a {
 	}
 
 	#values {
-		// background: url('@{path}repeat-grid-5.svg') right 65% top 75% / auto no-repeat;
+		background: url('@{path}repeat-grid-5.svg') right -150px top -85px / auto no-repeat;
 		
-		.theme-headline {
-			background: 1px @themeColor1;
-		}
 	}
 
 	#callouts {
