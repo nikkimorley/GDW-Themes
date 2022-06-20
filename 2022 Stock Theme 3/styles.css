@@ -383,6 +383,11 @@ a:hover {
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #about-services .theme-btn {
+    margin-bottom: 30px;
+  }
+}
 #theme-custom-banner #about-services .theme-btn:hover {
   background: #BFCCDE;
   color: #245367;
@@ -396,6 +401,11 @@ a:hover {
   position: relative;
   z-index: 0;
   padding-right: 90px;
+}
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #values .values-img {
+    padding-right: 0;
+  }
 }
 #theme-custom-banner #values .values-img::before {
   content: '';
@@ -415,20 +425,47 @@ a:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #values .values-wrap {
+    flex-basis: 100%;
+  }
+}
 #theme-custom-banner #values .values-wrap .values {
-  padding-top: 45px;
+  padding-top: 40px;
   flex-basis: 50%;
 }
 #theme-custom-banner #values .values-wrap .values .theme-headline {
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #values .values-wrap .values .theme-headline {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+}
 #theme-custom-banner #values .values-wrap .theme-btn {
   margin-top: 30px;
 }
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #values .values-wrap .theme-btn {
+    padding: 15px 20px;
+  }
+}
 #theme-custom-banner #callouts {
+  display: flex;
   text-align: center;
 }
-#theme-custom-banner #callouts .call-text {
+#theme-custom-banner #callouts .call-1 {
+  background: url('images/call-1.jpg') left / contain no-repeat;
+}
+#theme-custom-banner #callouts .call-2 {
+  background: url('images/call-2.jpg') center / contain no-repeat;
+}
+#theme-custom-banner #callouts .call-3 {
+  background: url('images/call-3.jpg') right / contain no-repeat;
+}
+#theme-custom-banner #callouts .theme-headline {
+  text-transform: none;
   color: #245367;
   background-color: #BFCCDE;
   font-weight: 700;

@@ -242,6 +242,9 @@ a {
 			margin-top: auto; // fixes the button to the bottom
 			border: 2px solid @themeColor1;
 			color: @themeColor1;
+			@media @mobile {
+				margin-bottom: 30px;
+			}
 				&:hover {
 					background: @themeColor1;
 					color: @themeColor3; 
@@ -258,6 +261,9 @@ a {
 			position: relative;
 			z-index: 0;
 			padding-right: 90px;
+			@media @mobile {
+				padding-right: 0;
+			}
 				&::before {
 					content: '';
 					display: block;
@@ -278,16 +284,26 @@ a {
 			flex-direction: columns;
 			justify-content: space-evenly;
 			flex-wrap: wrap;
+			@media @mobile {
+				flex-basis: 100%;
+			}
 			.values {
-				padding-top: 45px;
+				padding-top: 40px;
 				flex-basis: 50%;
 				.theme-headline {
 					margin-bottom: 40px;
+					@media @mobile {
+						margin-top: 25px;
+						font-size: 30px;
+					}
 				}
 			}
 
 			.theme-btn {
 				margin-top: 30px;
+				@media @mobile {
+					padding: 15px 20px;
+				}
 			}
 		}
 
@@ -296,9 +312,23 @@ a {
 	}
 
 	#callouts {
+		display: flex;
 		text-align: center;
 
-		.call-text {
+		.call-1 {
+			background: url('@{path}call-1.jpg') left / contain no-repeat;
+		}
+
+		.call-2 {
+			background: url('@{path}call-2.jpg') center / contain no-repeat;
+		}
+
+		.call-3 {
+			background: url('@{path}call-3.jpg') right / contain no-repeat;
+		}
+
+		.theme-headline {
+			text-transform: none;
 			color: @themeColor3;
 			background-color: @themeColor1;
 			font-weight: 700;
