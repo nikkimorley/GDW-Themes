@@ -389,6 +389,41 @@ a:hover {
 }
 #theme-custom-banner #values {
   background: url('images/repeat-grid-5.svg') right -150px top -85px / auto no-repeat;
+  padding: 130px 0;
+}
+#theme-custom-banner #values .values-img {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  padding-right: 90px;
+}
+#theme-custom-banner #values .values-img::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 257px;
+  width: 192px;
+  left: 14px;
+  top: 20px;
+  background: #D59361;
+  border: solid 1px #D59361;
+}
+#theme-custom-banner #values .values-wrap {
+  display: flex;
+  flex-direction: columns;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#theme-custom-banner #values .values-wrap .values {
+  padding-top: 45px;
+  flex-basis: 50%;
+}
+#theme-custom-banner #values .values-wrap .values .theme-headline {
+  margin-bottom: 40px;
+}
+#theme-custom-banner #values .values-wrap .theme-btn {
+  margin-top: 30px;
 }
 #theme-custom-banner #callouts {
   text-align: center;

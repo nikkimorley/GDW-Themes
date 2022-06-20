@@ -251,6 +251,47 @@ a {
 
 	#values {
 		background: url('@{path}repeat-grid-5.svg') right -150px top -85px / auto no-repeat;
+		padding: 130px 0;
+
+		.values-img {
+			display: flex;
+			position: relative;
+			z-index: 0;
+			padding-right: 90px;
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					z-index: -1;
+					height: 257px;
+					width: 192px;
+					left: 14px;
+					top: 20px;
+					background: @themeColor2;
+					border: solid 1px @themeColor2;
+				}
+			}
+		
+
+		.values-wrap {
+			display: flex;
+			flex-direction: columns;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			.values {
+				padding-top: 45px;
+				flex-basis: 50%;
+				.theme-headline {
+					margin-bottom: 40px;
+				}
+			}
+
+			.theme-btn {
+				margin-top: 30px;
+			}
+		}
+
+		
 		
 	}
 
