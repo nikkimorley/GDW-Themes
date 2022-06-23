@@ -471,6 +471,45 @@ a:hover {
   font-weight: 700;
   padding: 15px;
 }
+#theme-custom-banner #contact {
+  background-color: #D59361;
+  height: 250px;
+}
+#theme-custom-banner #contact .contact-wrap {
+  display: flex;
+  padding: 80px;
+  align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-custom-banner #contact .contact-wrap {
+    padding: 60px 75px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #contact .contact-wrap {
+    padding: 60px 70px;
+  }
+}
+#theme-custom-banner #contact .contact-wrap .contact-headline {
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-right: 120px;
+}
+@media only screen and (max-width: 1200px) {
+  #theme-custom-banner #contact .contact-wrap .contact-headline {
+    padding-right: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #contact .contact-wrap .contact-headline {
+    padding-right: 0;
+  }
+}
+#theme-custom-banner #contact .contact-wrap .contact-headline .theme-btn {
+  text-transform: none;
+}
 /* ==================================================================
 
 					// MOBILE MEDIA QUERIES

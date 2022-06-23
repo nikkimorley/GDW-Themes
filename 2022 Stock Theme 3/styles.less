@@ -305,10 +305,7 @@ a {
 					padding: 15px 20px;
 				}
 			}
-		}
-
-		
-		
+		}	
 	}
 
 	#callouts {
@@ -333,6 +330,41 @@ a {
 			background-color: @themeColor1;
 			font-weight: 700;
 			padding: 15px;
+		}
+	}
+
+	#contact {
+		background-color: @themeColor2;
+		height: 250px;
+
+		.contact-wrap {
+			display: flex;
+			padding: 80px;
+			align-items: center;
+			@media @desktop {
+				padding: 60px 75px;
+			}
+			@media @mobile {
+				padding: 60px 70px;
+			}
+
+			.contact-headline {
+				color: @white;
+				font-size: 40px;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding-right: 120px;
+				@media @desktop {
+					padding-right: 60px;
+				}
+				@media @mobile {
+					padding-right: 0;
+				}
+
+				.theme-btn {
+					text-transform: none;
+				}
+			}
 		}
 	}
 }
