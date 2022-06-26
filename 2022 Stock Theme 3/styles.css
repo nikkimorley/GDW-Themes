@@ -454,15 +454,35 @@ a:hover {
 #theme-custom-banner #callouts {
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#theme-custom-banner #callouts .call {
+  padding: 150px 0;
+  min-width: 375px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-basis: calc(100% / 3);
+}
+@media only screen and (max-width: 1200px) {
+  #theme-custom-banner #callouts .call {
+    flex-basis: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #theme-custom-banner #callouts .call {
+    min-width: 100%;
+  }
 }
 #theme-custom-banner #callouts .call-1 {
-  background: url('images/call1.jpg') left / contain no-repeat;
+  background-image: url('images/call1.jpg');
 }
 #theme-custom-banner #callouts .call-2 {
-  background: url('images/call2.jpg') center / contain no-repeat;
+  background-image: url('images/call2.jpg');
 }
 #theme-custom-banner #callouts .call-3 {
-  background: url('images/call3.jpg') right / contain no-repeat;
+  background-color: red;
 }
 #theme-custom-banner #callouts .theme-headline {
   text-transform: none;
@@ -473,21 +493,17 @@ a:hover {
 }
 #theme-custom-banner #contact {
   background-color: #D59361;
-  height: 250px;
 }
 #theme-custom-banner #contact .contact-wrap {
   display: flex;
-  padding: 80px;
+  justify-content: space-evenly;
+  padding: 80px 0;
+  text-align: center;
   align-items: center;
 }
 @media only screen and (max-width: 1200px) {
   #theme-custom-banner #contact .contact-wrap {
-    padding: 60px 75px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  #theme-custom-banner #contact .contact-wrap {
-    padding: 60px 70px;
+    flex-direction: column;
   }
 }
 #theme-custom-banner #contact .contact-wrap .contact-headline {
@@ -495,16 +511,12 @@ a:hover {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-right: 120px;
+  max-width: 650px;
 }
 @media only screen and (max-width: 1200px) {
   #theme-custom-banner #contact .contact-wrap .contact-headline {
-    padding-right: 60px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  #theme-custom-banner #contact .contact-wrap .contact-headline {
-    padding-right: 0;
+    max-width: 100%;
+    margin-bottom: 40px;
   }
 }
 #theme-custom-banner #contact .contact-wrap .contact-headline .theme-btn {

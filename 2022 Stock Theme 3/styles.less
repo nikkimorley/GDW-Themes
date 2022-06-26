@@ -311,17 +311,35 @@ a {
 	#callouts {
 		display: flex;
 		text-align: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		
+		.call {
+			padding:150px 0;
+			min-width: 375px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			flex-basis: calc(100% / 3);
+			@media @desktop {
+				flex-basis: 50%;
+			}
+			@media @mobile {
+				min-width: 100%;
+			}
+		}
 
 		.call-1 {
-			background: url('@{path}call1.jpg') left / contain no-repeat;
+			background-image: url('@{path}call1.jpg');
 		}
 
 		.call-2 {
-			background: url('@{path}call2.jpg') center / contain no-repeat;
+			background-image: url('@{path}call2.jpg');
 		}
 
 		.call-3 {
-			background: url('@{path}call3.jpg') right / contain no-repeat;
+			// background-image: url('@{path}call3.jpg');
+			background-color: red;
 		}
 
 		.theme-headline {
@@ -335,31 +353,33 @@ a {
 
 	#contact {
 		background-color: @themeColor2;
-		height: 250px;
 
 		.contact-wrap {
 			display: flex;
-			padding: 80px;
+			justify-content: space-evenly;
+			padding: 80px 0;
+			text-align: center;
 			align-items: center;
 			@media @desktop {
-				padding: 60px 75px;
+				flex-direction: column;
 			}
-			@media @mobile {
-				padding: 60px 70px;
-			}
+
+			// .contact-item {
+			// 	margin: 40px 0;
+			// }
 
 			.contact-headline {
 				color: @white;
 				font-size: 40px;
 				font-weight: 700;
 				text-transform: uppercase;
-				padding-right: 120px;
+				max-width: 650px;
+				// padding-right: 120px;
 				@media @desktop {
-					padding-right: 60px;
+					max-width: 100%;
+					margin-bottom: 40px;
 				}
-				@media @mobile {
-					padding-right: 0;
-				}
+				
 
 				.theme-btn {
 					text-transform: none;
