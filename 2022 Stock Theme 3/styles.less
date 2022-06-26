@@ -255,41 +255,33 @@ a {
 	#values {
 		background: url('@{path}repeat-grid-5.svg') right -150px top -85px / auto no-repeat;
 		padding: 130px 0;
-
-		.values-img {
-			display: flex;
-			position: relative;
-			z-index: 0;
-			padding-right: 90px;
-			@media @mobile {
-				padding-right: 0;
-			}
-				&::before {
-					content: '';
-					display: block;
-					position: absolute;
-					z-index: -1;
-					height: 257px;
-					width: 192px;
-					left: 14px;
-					top: 20px;
-					background: @themeColor2;
-					border: solid 1px @themeColor2;
-				}
-			}
-		
+		@media @tablet {
+			background-position: right -150px top 75px;
+		}
 
 		.values-wrap {
 			display: flex;
-			flex-direction: columns;
 			justify-content: space-evenly;
 			flex-wrap: wrap;
-			@media @mobile {
-				flex-basis: 100%;
+			@media @desktop {
+				justify-content: space-between;
 			}
+
+			.values-img {
+				padding-top: 15px;
+				padding-left: 15px;
+				background-image: linear-gradient(to right, @themeColor2, @themeColor2);
+				background-repeat: no-repeat;
+				background-size: 192px 257px;
+				background-position: top left;
+			}
+
 			.values {
 				padding-top: 40px;
-				flex-basis: 50%;
+				flex-basis: 500px;
+				@media @tablet {
+					flex-basis: 100%;
+				}
 				.theme-headline {
 					margin-bottom: 40px;
 					@media @mobile {
@@ -364,23 +356,17 @@ a {
 				flex-direction: column;
 			}
 
-			// .contact-item {
-			// 	margin: 40px 0;
-			// }
-
 			.contact-headline {
 				color: @white;
 				font-size: 40px;
 				font-weight: 700;
 				text-transform: uppercase;
 				max-width: 650px;
-				// padding-right: 120px;
 				@media @desktop {
 					max-width: 100%;
 					margin-bottom: 40px;
 				}
 				
-
 				.theme-btn {
 					text-transform: none;
 				}
