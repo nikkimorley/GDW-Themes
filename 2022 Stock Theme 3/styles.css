@@ -456,13 +456,13 @@ a:hover {
   text-align: center;
 }
 #theme-custom-banner #callouts .call-1 {
-  background: url('images/call-1.jpg') left / contain no-repeat;
+  background: url('images/call1.jpg') left / contain no-repeat;
 }
 #theme-custom-banner #callouts .call-2 {
-  background: url('images/call-2.jpg') center / contain no-repeat;
+  background: url('images/call2.jpg') center / contain no-repeat;
 }
 #theme-custom-banner #callouts .call-3 {
-  background: url('images/call-3.jpg') right / contain no-repeat;
+  background: url('images/call3.jpg') right / contain no-repeat;
 }
 #theme-custom-banner #callouts .theme-headline {
   text-transform: none;
