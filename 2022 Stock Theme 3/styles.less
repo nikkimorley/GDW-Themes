@@ -178,26 +178,40 @@ a {
 
 	#about-services {
 		background: @themeColor3;
-		padding-top: 75px;
-		padding-bottom: 65px;
 		text-align: center;
+		padding: 70px 0;
 
 		.about-wrap {
 			display: flex; 
-
-			@media @mobile {
+			justify-content: space-between;
+			@media @tablet {
 				flex-direction: column; //set the direction of the children (.about-item) to be column. flex-wrap: wrap also works
 			}
 		}
 
+		// #about-practice {
+		// 	.theme-text {
+		// 		max-width: 500px;
+		// 	}
+		// }
+		.about-line {
+			padding: 30px;
+			background-image:  linear-gradient(to bottom, @themeColor1, @themeColor1);
+			background-repeat: no-repeat;
+			background-size: 2px 80%;
+			background-position: center;
+			@media @tablet {
+				background-size: 80% 2px;
+				padding: 70px 30px;
+			}
+		}
 		.about-item {
 			// child properties for .about-item as it relates to .about-wrap
 			display: flex;
-			flex-basis: 50%; // keeps the direct children of .about-parent at 50% each
+			flex-basis: 40%; // keeps the direct children of .about-parent at 50% each
 			// parent properties for the contents of .about-item
 			flex-direction: column; // aligns the items vertically
 			flex-wrap: wrap; // prevents items from taking up full width of .about-item
-
 			@media @mobile {
 				flex-basis: 100%; // set the width to be 100% of .about-wrap's width now that it's a column layout
 			}
@@ -242,9 +256,6 @@ a {
 			margin-top: auto; // fixes the button to the bottom
 			border: 2px solid @themeColor1;
 			color: @themeColor1;
-			@media @mobile {
-				margin-bottom: 30px;
-			}
 				&:hover {
 					background: @themeColor1;
 					color: @themeColor3; 

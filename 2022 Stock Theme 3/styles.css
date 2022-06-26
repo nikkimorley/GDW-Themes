@@ -324,21 +324,34 @@ a:hover {
 }
 #theme-custom-banner #about-services {
   background: #245367;
-  padding-top: 75px;
-  padding-bottom: 65px;
   text-align: center;
+  padding: 70px 0;
 }
 #theme-custom-banner #about-services .about-wrap {
   display: flex;
+  justify-content: space-between;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   #theme-custom-banner #about-services .about-wrap {
     flex-direction: column;
   }
 }
+#theme-custom-banner #about-services .about-line {
+  padding: 30px;
+  background-image: linear-gradient(to bottom, #BFCCDE, #BFCCDE);
+  background-repeat: no-repeat;
+  background-size: 2px 80%;
+  background-position: center;
+}
+@media only screen and (max-width: 992px) {
+  #theme-custom-banner #about-services .about-line {
+    background-size: 80% 2px;
+    padding: 70px 30px;
+  }
+}
 #theme-custom-banner #about-services .about-item {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 40%;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -382,11 +395,6 @@ a:hover {
   margin-top: auto;
   border: 2px solid #BFCCDE;
   color: #BFCCDE;
-}
-@media only screen and (max-width: 768px) {
-  #theme-custom-banner #about-services .theme-btn {
-    margin-bottom: 30px;
-  }
 }
 #theme-custom-banner #about-services .theme-btn:hover {
   background: #BFCCDE;
